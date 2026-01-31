@@ -474,6 +474,8 @@ extern const u8 gText_B3F[];
 extern const u8 gText_B4F[];
 extern const u8 gText_Rooftop[];
 extern const u8 gText_ElevatorNowOn[];
+extern const u8 gText_GBA_CART_FireRed[];
+extern const u8 gText_GBA_CART_LeafGreen[];
 
 extern const u8 gText_BattleTower2[];
 extern const u8 gText_BattleDome[];

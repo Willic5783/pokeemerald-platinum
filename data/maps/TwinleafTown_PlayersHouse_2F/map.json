@@ -95,14 +95,6 @@
     },
     {
       "type": "sign",
-      "x": 4,
-      "y": 3,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "TwinleafTown_PlayersHouse_2F_EventScript_GameCube"
-    },
-    {
-      "type": "sign",
       "x": 6,
       "y": 2,
       "elevation": 0,
@@ -124,6 +116,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "TwinleafTown_PlayersHouse_2F_EventScript_TV"
+    },
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "TwinleafTown_PlayersHouse_2F_GBA_Cart_Enable"
     }
   ]
 }

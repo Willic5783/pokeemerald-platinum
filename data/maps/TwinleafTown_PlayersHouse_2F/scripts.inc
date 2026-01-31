@@ -309,9 +309,93 @@ TwinleafTown_PlayersHouse_2F_EventScript_TV::
 	msgbox TwinleafTown_PlayersHouse_2F_Text_TV, MSGBOX_SIGN
 	end
 
-TwinleafTown_PlayersHouse_2F_EventScript_GameCube::
-	msgbox TwinleafTown_PlayersHouse_2F_Text_GameCube, MSGBOX_SIGN
+// GBA_CART vars: 0 = FireRed, 1 = Leafgreen, 2 = Ruby, 3 = Sapphire, 4 = Emerald, and 5 = off
+TwinleafTown_PlayersHouse_2F_GBA_Cart_Enable::
+	lockall
+	msgbox TwinleafTown_PlayersHouse_2F_Text_GameCube, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq TwinleafTown_PlayersHouse_2F_GBA_Cart_Enable_Choice
+
+TwinleafTown_PlayersHouse_2F_GBA_Cart_Enable_End:
 	end
+
+TwinleafTown_PlayersHouse_2F_GBA_Cart_Enable_Choice:
+	message Twinleaf_GBA_Cart_Enable_Text_Which_Cartridge
+	multichoicedefault 25, 0, 9, 0, 0
+	closemessage
+	compare VAR_RESULT, 0
+	goto_if_eq Twinleaf_GBA_Cart_Enable_FireRed
+	compare VAR_RESULT, 1
+	goto_if_eq Twinleaf_GBA_Cart_Enable_LeafGreen
+	compare VAR_RESULT, 2
+	goto_if_eq Twinleaf_GBA_Cart_Enable_Ruby
+	compare VAR_RESULT, 3
+	goto_if_eq Twinleaf_GBA_Cart_Enable_Sapphire
+	compare VAR_RESULT, 4
+	goto_if_eq Twinleaf_GBA_Cart_Enable_Emerald
+	setvar 0x404E, 5
+	msgbox TwinleafTown_PlayersHouse_2F_Text_Guess_Not, MSGBOX_SIGN
+
+
+Twinleaf_GBA_Cart_Enable_Complete:
+	goto TwinleafTown_PlayersHouse_2F_GBA_Cart_Enable_End
+
+Twinleaf_GBA_Cart_Enable_FireRed:
+	call GBACartFade
+	setvar 0x404E, 0
+	msgbox Twinleaf_GBA_Cart_Enable_Text_Success, MSGBOX_NPC
+	waitmessage
+	release
+	goto Twinleaf_GBA_Cart_Enable_Complete
+
+Twinleaf_GBA_Cart_Enable_LeafGreen:
+	call GBACartFade
+	setvar 0x404E, 1
+	msgbox Twinleaf_GBA_Cart_Enable_Text_Success, MSGBOX_NPC
+	waitmessage
+	release
+	goto Twinleaf_GBA_Cart_Enable_Complete
+
+Twinleaf_GBA_Cart_Enable_Ruby:
+	call GBACartFade
+	setvar 0x404E, 2
+	msgbox Twinleaf_GBA_Cart_Enable_Text_Success, MSGBOX_NPC
+	waitmessage
+	release
+	goto Twinleaf_GBA_Cart_Enable_Complete
+
+Twinleaf_GBA_Cart_Enable_Sapphire:
+	call GBACartFade
+	setvar 0x404E, 3
+	msgbox Twinleaf_GBA_Cart_Enable_Text_Success, MSGBOX_NPC
+	waitmessage
+	release
+	goto Twinleaf_GBA_Cart_Enable_Complete
+
+Twinleaf_GBA_Cart_Enable_Emerald:
+	call GBACartFade
+	setvar 0x404E, 4
+	msgbox Twinleaf_GBA_Cart_Enable_Text_Success, MSGBOX_NPC
+	waitmessage
+	release
+	goto Twinleaf_GBA_Cart_Enable_Complete
+
+
+GBACartFade::
+	fadescreen FADE_TO_BLACK
+	delay 20
+	fadescreen FADE_FROM_BLACK
+	return
+
+
+Twinleaf_GBA_Cart_Enable_Text_Which_Cartridge:
+	.string "Which cartridge would you like to insert?$"
+
+Twinleaf_GBA_Cart_Enable_Text_Success:
+	.string "Success!$"
+
+TwinleafTown_PlayersHouse_2F_Text_Guess_Not:
+	.string "Guess not...$"
 
 TwinleafTown_PlayersHouse_2F_Text_ThereYouAre:
 	.string "{RIVAL}: There you are!$"
@@ -334,13 +418,12 @@ TwinleafTown_PlayersHouse_2F_Text_WhereWas:
 	.string "{RIVAL}: Uh...\n"
 	.string "Where was I?$"
 
-@ TODO: Add dollar sign ₽
 TwinleafTown_PlayersHouse_2F_Text_RightRight:
 	.string "Oh, right, right! We're going to go see\n"
 	.string "Prof. Rowan to get some Pokémon.\p"
 	.string "I'll be waiting outside.\p"
 	.string "OK, {PLAYER}? If' you're late, I'm\n"
-	.string "fining you 10 million!$"
+	.string "fining you ¥10 million!$"
 
 TwinleafTown_PlayersHouse_2F_Text_Controls:
 	.string "The X button opens the menu!$"
@@ -357,5 +440,10 @@ TwinleafTown_PlayersHouse_2F_Text_TV:
 	.string "of a video game.$"
 
 TwinleafTown_PlayersHouse_2F_Text_GameCube:
-	.string "It's a Nintendo GameCube!\p"
-	.string "It's controlled by a Gameboy Advance!$"
+	.string "It's a Nintendo GameCube!\n"
+	.string "It's controlled by a Gameboy Advance!\p"
+    
+TwinleafTown_PlayersHouse_2F_Text_DualSlotEnable:
+	.string "Would you like to enable GBA\n"
+    .string "dual slot encounters?$"
+    
