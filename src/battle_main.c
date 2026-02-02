@@ -27,6 +27,7 @@
 #include "evolution_scene.h"
 #include "field_weather.h"
 #include "follower_npc.h"
+#include "gba_dual_slot.h"
 #include "graphics.h"
 #include "gpu_regs.h"
 #include "international_string_util.h"
@@ -5591,6 +5592,7 @@ static void HandleEndTurn_FinishBattle(void)
                 }
             }
             TryPutPokemonTodayOnAir();
+            TryStartGBAEncounters();
         }
 
         if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK

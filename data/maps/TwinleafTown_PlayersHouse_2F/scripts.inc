@@ -317,6 +317,7 @@ TwinleafTown_PlayersHouse_2F_GBA_Cart_Enable::
 	goto_if_eq TwinleafTown_PlayersHouse_2F_GBA_Cart_Enable_Choice
 
 TwinleafTown_PlayersHouse_2F_GBA_Cart_Enable_End:
+	closemessage
 	end
 
 TwinleafTown_PlayersHouse_2F_GBA_Cart_Enable_Choice:

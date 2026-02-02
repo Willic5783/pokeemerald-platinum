@@ -648,6 +648,7 @@ struct SecretBase
 #include "global.fieldmap.h"
 #include "global.berry.h"
 #include "global.tv.h"
+#include "global.gba_dual_slot.h"
 #include "pokemon.h"
 
 struct WarpData
@@ -1126,10 +1127,18 @@ struct SaveBlock1
     /*0x2B95*/ u8 outbreakUnused1;
     /*0x2B96*/ u16 outbreakUnused2;
     /*0x2B98*/ u16 outbreakPokemonMoves[MAX_MON_MOVES];
-    /*0x2BA0*/ u8 outbreakUnused3;
+    /*0x2BA0*/ u8 outbreakUnused3; 
     /*0x2BA1*/ u8 outbreakPokemonProbability;
     /*0x2BA2*/ u16 outbreakDaysLeft;
     /*0x2BA4*/ struct GabbyAndTyData gabbyAndTyData;
+    /*0x2BA5*/ u16 GBAEncounterPokemonSpecies; // Start GBA Encounters
+    /*0x2BA6*/ u8 GBAEncounterLocationMapNum;
+    /*0x2BA7*/ u8 GBAEncounterLocationMapGroup;
+    /*0x2BA8*/ u8 GBAEncounterPokemonLevel;
+    /*0x2BA9*/ u8 GBAEncounterUnused1;
+    /*0x2BAA*/ u16 GBAEncounterUnused2;
+    /*0x2BAB*/ u16 GBAEncounterPokemonMoves[MAX_MON_MOVES];
+    /*0x2BAC*/ u8 GBAEncounterUnused3; // End GBA Encounters
     /*0x2BB0*/ u16 easyChatProfile[EASY_CHAT_BATTLE_WORDS_COUNT];
     /*0x2BBC*/ u16 easyChatBattleStart[EASY_CHAT_BATTLE_WORDS_COUNT];
     /*0x2BC8*/ u16 easyChatBattleWon[EASY_CHAT_BATTLE_WORDS_COUNT];
