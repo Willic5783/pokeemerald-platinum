@@ -15,8 +15,13 @@
   "connections": [
     {
       "map": "MAP_JUBILIFE_CITY",
-      "offset": -42,
+      "offset": -43,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE204_NORTH",
+      "offset": -2,
+      "direction": "up"
     }
   ],
   "object_events": [
