@@ -123,3 +123,15 @@ target_include_directories(pokeemerald_headers INTERFACE
 )
 
 add_dependencies(ide pokeemerald_headers)
+
+# Create a dummy compile target so CMake generates compile_commands.json entries
+# for the project's C sources. This greatly improves CLion/clangd code analysis
+# without changing the actual GNU Make-based build. The target is excluded from
+# the default build so it won't be compiled unless explicitly requested.
+add_library(ide_index STATIC EXCLUDE_FROM_ALL ${POKEMERALD_C_SOURCES})
+target_link_libraries(ide_index PRIVATE pokeemerald_headers)
+
+# Keep the compile environment lightweight for analysis only.
+# You can uncomment the following line if noisy warnings hinder indexing
+# (it does not affect the real build, only this dummy target):
+# target_compile_options(ide_index PRIVATE -w)
