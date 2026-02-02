@@ -1,25 +1,14 @@
+#include "global.h"
 #include "gba_dual_slot.h"
 #include "battle.h"
-#include "constants/region_map_sections.h"
-#include "data.h"
 #include "event_data.h"
-#include "event_object_movement.h"
 #include "event_scripts.h"
 #include "field_message_box.h"
 #include "fieldmap.h"
-#include "global.h"
-#include "international_string_util.h"
-#include "overworld.h"
-#include "pokedex.h"
 #include "region_map.h"
-#include "rtc.h"
-#include "script_menu.h"
 #include "string_util.h"
-#include "strings.h"
-#include "text.h"
 
 // Function declarations
-static bool8 BernoulliTrial(u16);
 static void TVShowDone(void);
 void StartGBACartEncounters(void);
 
@@ -28,13 +17,6 @@ void StartGBACartEncounters(void);
 #define rbernoulli(num, den) BernoulliTrial(0xFFFF * (num) / (den))
 
 static EWRAM_DATA ALIGNED(4) u8 sTVShowState = 0;
-
-static bool8 BernoulliTrial(u16 ratio) {
-  if (Random() <= ratio)
-    return FALSE;
-
-  return TRUE;
-}
 
 u8 *const gGBAStringVarPtrs[] = {gStringVar1, gStringVar2, gStringVar3};
 
@@ -86,7 +68,13 @@ void TryStartGBAEncounters(void) {
   u16 outbreakIdx;
   TVShow *show;
 
+  for (i = 0; i < LAST_TVSHOW_IDX; i++) {
+    if (gSaveBlock1Ptr->tvShows[i].common.kind == TVSHOW_MASS_OUTBREAK)
+      return;
+  }
+
   outbreakIdx = 0;
+  show = &gSaveBlock1Ptr->tvShows[0];
   show->massOutbreak.kind = TVSHOW_MASS_OUTBREAK;
   show->massOutbreak.active = TRUE;
   show->massOutbreak.level = sPokeOutbreakSpeciesList[outbreakIdx].level;
@@ -106,13 +94,6 @@ void TryStartGBAEncounters(void) {
   show->massOutbreak.unused5 = 0;
   show->massOutbreak.daysLeft = 1;
   show->massOutbreak.language = gGameLanguage;
-
-  for (i = 0; i < LAST_TVSHOW_IDX; i++) {
-    if (gSaveBlock1Ptr->tvShows[i].common.kind == TVSHOW_MASS_OUTBREAK)
-      return;
-  }
-  if (!rbernoulli(1, 2)) {
-  }
 }
 
 // THIS DOES NOT WORK CURRENTLY... FIX EVENTUALLY... TryStartGBAEncounters tries
