@@ -27,6 +27,7 @@ static const struct {
     u8 level;
     u8 location;
 } sPokeOutbreakSpeciesList[] = {
+
     {
         .species = SPECIES_SEEDOT,
         .moves = {MOVE_BIDE, MOVE_HARDEN, MOVE_LEECH_SEED},
@@ -219,3 +220,1500 @@ static void TryEndMassOutbreak(u16 days) {
 //     else
 //         return GenConfigTimeOfDay(timeOfDay);
 // }
+
+
+
+static const struct {
+    u16 species;
+    u16 moves[MAX_MON_MOVES];
+    u8 level;
+    u8 location;
+
+} sPokeOutbreakSpeciesListFR[] = {
+{
+        .species = SPECIES_GROWLITHE,
+        .moves = {MOVE_BITE, MOVE_ROAR},
+        .level = 2,
+        .location = MAP_NUM(MAP_ROUTE201)
+    },
+    {
+        .species = SPECIES_GROWLITHE,
+        .moves = {MOVE_BITE, MOVE_ROAR},
+        .level = 2,
+        .location = MAP_NUM(MAP_ROUTE202)
+    },
+    {
+        .species = SPECIES_CATERPIE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE204NORTH)
+    },
+    {
+        .species = SPECIES_CATERPIE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE204SOUTH)
+    },
+    {
+        .species = SPECIES_EKANS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE212SOUTH)
+    },
+    {
+        .species = SPECIES_PELIPPER,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE230)
+    },
+    {
+        .species = SPECIES_CATERPIE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ETERNA_FOREST)
+    },
+    {
+        .species = SPECIES_ARBOK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_GREAT_MARSH_1)
+    },
+    {
+        .species = SPECIES_ARBOK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_GREAT_MARSH_2)
+    },
+    {
+        .species = SPECIES_ARBOK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_GREAT_MARSH_3)
+    },
+    {
+        .species = SPECIES_ARBOK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_GREAT_MARSH_4)
+    },
+    {
+        .species = SPECIES_ARBOK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_GREAT_MARSH_5)
+    },
+    {
+        .species = SPECIES_ARBOK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_GREAT_MARSH_6)
+    },
+    {
+        .species = SPECIES_GASTLY,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LOST_TOWER_4F)
+    },
+    {
+        .species = SPECIES_GASTLY,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LOST_TOWER_5F)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_OREBURGH_MINE_1F)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_OREBURGH_MINE_B1F)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_1)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_2)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_3)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_4)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_5)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_6)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_1)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_4)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_5)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_6)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_7)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_8)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_9)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_WAYBACK_CAVE)
+    },
+
+
+
+
+static const struct {
+    u16 species;
+    u16 moves[MAX_MON_MOVES];
+    u8 level;
+    u8 location;
+
+} sPokeOutbreakSpeciesListLG[] = {
+    {
+        .species = SPECIES_WEEDLE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE204NORTH)
+    },
+    {
+        .species = SPECIES_WEEDLE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE204SOUTH)
+    },
+    {
+        .species = SPECIES_VULPIX,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE209)
+    },
+    {
+        .species = SPECIES_VULPIX,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE214)
+    },
+    {
+        .species = SPECIES_SANDSLASH,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE228)
+    },
+    {
+        .species = SPECIES_PELIPPER,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE230)
+    },
+    {
+        .species = SPECIES_WEEDLE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ETERNA_FOREST)
+    },
+    {
+        .species = SPECIES_GASTLY,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LOST_TOWER_4F)
+    },
+    {
+        .species = SPECIES_GASTLY,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LOST_TOWER_5F)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_OREBURGH_MINE_1F)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_OREBURGH_MINE_B1F)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_1)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_2)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_3)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_4)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_5)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_6)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_1)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_4)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_5)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_6)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_7)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_8)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_9)
+    },
+    {
+        .species = SPECIES_SANDSHREW,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_WAYBACK_CAVE)
+    },
+    {
+        .species = SPECIES_SANDSHREW,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_WAYBACK_CAVE_SECRET)
+    },
+
+
+
+static const struct {
+    u16 species;
+    u16 moves[MAX_MON_MOVES];
+    u8 level;
+    u8 location;
+
+} sPokeOutbreakSpeciesListR[] = {
+    {
+        .species = SPECIES_SEEDOT,
+        .moves = {MOVE_BIDE, MOVE_HARDEN},
+        .level = 5,
+        .location = MAP_NUM(MAP_ROUTE203)
+    },
+    {
+        .species = SPECIES_SEEDOT,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE204NORTH)
+    },
+    {
+        .species = SPECIES_SEEDOT,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE204SOUTH)
+    },
+    {
+        .species = SPECIES_ZANGOOSE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE208)
+    },
+    {
+        .species = SPECIES_ZANGOOSE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE210NORTH)
+    },
+    {
+        .species = SPECIES_ZANGOOSE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE210SOUTH)
+    },
+    {
+        .species = SPECIES_NUZLEAF,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE229)
+    },
+    {
+        .species = SPECIES_PELIPPER,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE230)
+    },
+    {
+        .species = SPECIES_SEEDOT,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ETERNA_FOREST)
+    },
+    {
+        .species = SPECIES_MAWILE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_IRON_ISLAND_B1F_LEFT)
+    },
+    {
+        .species = SPECIES_MAWILE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_IRON_ISLAND_B1F_RIGHT)
+    },
+    {
+        .species = SPECIES_MAWILE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_IRON_ISLAND_B2F_LEFT)
+    },
+    {
+        .species = SPECIES_MAWILE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_IRON_ISLAND_B2F_RIGHT)
+    },
+    {
+        .species = SPECIES_MAWILE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_IRON_ISLAND_B3F)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LAKE_ACUITY)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LAKE_VALOR)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LAKE_VALOR)
+    },
+    {
+        .species = SPECIES_GASTLY,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LOST_TOWER_4F)
+    },
+    {
+        .species = SPECIES_GASTLY,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LOST_TOWER_5F)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_2F)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_2F_BACK)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_3F)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_3F_SUMMIT)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_4F_ABOVE)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_4F_WATERFALL)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_5F)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_6F)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_TUNNEL)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_OREBURGH_MINE_1F)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_OREBURGH_MINE_B1F)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_SENDOFF_SPRING)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_1)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_2)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_3)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_4)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_5)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_6)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_1)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_10)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_11)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_12)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_13)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_14)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_15)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_16)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_17)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_18)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_19)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_2)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_20)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_21)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_22)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_23)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_24)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_25)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_26)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_27)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_28)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_29)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_3)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_30)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_31)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_32)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_33)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_34)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_4)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_5)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_6)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_8)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_9)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_1)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_2)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_3)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_4)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_5)
+    },
+    {
+        .species = SPECIES_SOLROCK,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_6)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_WAYBACK_CAVE)
+    },
+
+
+static const struct {
+    u16 species;
+    u16 moves[MAX_MON_MOVES];
+    u8 level;
+    u8 location;
+} sPokeOutbreakSpeciesListS[] = {
+    {
+        .species = SPECIES_LOTAD,
+        .moves = {MOVE_ASTONISH, MOVE_GROWL, MOVE_ABSORB},
+        .level = 5,
+        .location = MAP_NUM(MAP_ROUTE203)
+    },
+    {
+        .species = SPECIES_LOTAD,
+        .moves = {MOVE_ASTONISH, MOVE_GROWL, MOVE_ABSORB},
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE204NORTH)
+    },
+    {
+        .species = SPECIES_LOTAD,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE204SOUTH)
+    },
+    {
+        .species = SPECIES_LOTAD,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE205PREETERNA) // FIX
+    },
+    {
+        .species = SPECIES_SEVIPER,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE208)
+    },
+    {
+        .species = SPECIES_LOMBRE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE212SOUTH)
+    },
+    {
+        .species = SPECIES_LOMBRE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE229)
+    },
+    {
+        .species = SPECIES_PELIPPER,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE230)
+    },
+    {
+        .species = SPECIES_SABLEYE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_IRON_ISLAND_B1F_LEFT)
+    },
+    {
+        .species = SPECIES_SABLEYE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_IRON_ISLAND_B1F_RIGHT)
+    },
+    {
+        .species = SPECIES_SABLEYE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_IRON_ISLAND_B2F_LEFT)
+    },
+    {
+        .species = SPECIES_SABLEYE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_IRON_ISLAND_B2F_RIGHT)
+    },
+    {
+        .species = SPECIES_SABLEYE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_IRON_ISLAND_B3F)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LAKE_ACUITY)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LAKE_VALOR)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LAKE_VERITY)
+    },
+    {
+        .species = SPECIES_GASTLY,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LOST_TOWER_4F)
+    },
+    {
+        .species = SPECIES_GASTLY,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LOST_TOWER_5F)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_2F)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_2F_BACK)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_3F)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_3F_SUMMIT)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_4F_ABOVE)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_4F_WATERFALL)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_5F)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_6F)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_MT_CORONET_TUNNEL)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_OREBURGH_MINE_1F)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_OREBURGH_MINE_B1F)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_SENDOFF_SPRING)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_1)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_2)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_3)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_4)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_5)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_6)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_1)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_10)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_11)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_12)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_13)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_14)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_15)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_16)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_17)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_18)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_19)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_2)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_20)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_21)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_22)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_23)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_24)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_25)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_26)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_27)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_28)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_29)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_3)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_30)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_31)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_32)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_33)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_34)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_4)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_5)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_6)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_8)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_9)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_1)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_2)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_3)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_4)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_5)
+    },
+    {
+        .species = SPECIES_LUNATONE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_3_6)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_WAYBACK_CAVE)
+    },
+
+
+
+static const struct {
+    u16 species;
+    u16 moves[MAX_MON_MOVES];
+    u8 level;
+    u8 location;
+
+} sPokeOutbreakSpeciesListE[] = {
+    {
+        .species = SPECIES_PINECO,
+        .moves = {MOVE_TACKLE, MOVE_PROTECT},
+        .level = 5,
+        .location = MAP_NUM(MAP_ROUTE203)
+    },
+    {
+        .species = SPECIES_PINECO,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE204NORTH)
+    },
+    {
+        .species = SPECIES_PINECO,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE204SOUTH)
+    },
+    {
+        .species = SPECIES_PINECO,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE210NORTH)
+    },
+    {
+        .species = SPECIES_PINECO,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE210SOUTH)
+    },
+    {
+        .species = SPECIES_TEDDIURSA,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE211WEST)
+    },
+    {
+        .species = SPECIES_URSARING,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE217)
+    },
+    {
+        .species = SPECIES_SHUCKLE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE224)
+    },
+    {
+        .species = SPECIES_PINECO,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE229)
+    },
+    {
+        .species = SPECIES_PELIPPER,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ROUTE230)
+    },
+    {
+        .species = SPECIES_URSARING,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LAKEFRONT_ACUITY)
+    },
+    {
+        .species = SPECIES_PINECO,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_ETERNA_FOREST)
+    },
+    {
+        .species = SPECIES_TEDDIURSA,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LAKE_ACUITY)
+    },
+    {
+        .species = SPECIES_GASTLY,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LOST_TOWER_4F)
+    },
+    {
+        .species = SPECIES_GASTLY,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_LOST_TOWER_5F)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_OREBURGH_MINE_1F)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_OREBURGH_MINE_B1F)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_1)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_2)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_3)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_4)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_5)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_1_6)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_1)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_4)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_5)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_6)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_7)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_8)
+    },
+    {
+        .species = SPECIES_DUSCLOPS,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_TURNBACK_CAVE_PILLAR_2_9)
+    },
+    {
+        .species = SPECIES_GEODUDE,
+        .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
+        .level = 2, // FIX
+        .location = MAP_NUM(MAP_WAYBACK_CAVE)
+    },
+
+
