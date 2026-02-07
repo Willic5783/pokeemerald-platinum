@@ -85,7 +85,7 @@
       "id": "LAYOUT_ROUTE204",
       "name": "Route204_Layout",
       "width": 32,
-      "height": 66,
+      "height": 35,
       "primary_tileset": "gTileset_OutdoorJubilife",
       "secondary_tileset": "gTileset_Route204",
       "border_filepath": "data/layouts/Route204/border.bin",
@@ -4730,6 +4730,16 @@
       "secondary_tileset": "gTileset_JubilifeSchool",
       "border_filepath": "data/layouts/JubilifeCity_TrainerSchool/border.bin",
       "blockdata_filepath": "data/layouts/JubilifeCity_TrainerSchool/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE204_NORTH",
+      "name": "Route204_North_Layout",
+      "width": 34,
+      "height": 30,
+      "primary_tileset": "gTileset_OutdoorJubilife",
+      "secondary_tileset": "gTileset_Route204",
+      "border_filepath": "data/layouts/Route204_North/border.bin",
+      "blockdata_filepath": "data/layouts/Route204_North/map.bin"
     }
   ]
 }

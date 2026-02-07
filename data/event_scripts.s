@@ -1199,3 +1199,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	
+
+	.include "data/maps/Route204_North/scripts.inc"

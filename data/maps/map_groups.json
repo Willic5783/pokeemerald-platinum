@@ -57,7 +57,8 @@
     "Route204",
     "Route207",
     "Route219",
-    "LakefrontVerity"
+    "LakefrontVerity",
+    "Route204_North"
   ],
   "gMapGroup_Caves": [
     "RavagedPath",

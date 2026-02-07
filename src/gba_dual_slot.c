@@ -20,22 +20,6 @@ static EWRAM_DATA ALIGNED(4) u8 sTVShowState = 0;
 
 u8 *const gGBAStringVarPtrs[] = {gStringVar1, gStringVar2, gStringVar3};
 
-
-static const struct {
-    u16 species;
-    u16 moves[MAX_MON_MOVES];
-    u8 level;
-    u8 location;
-} sPokeOutbreakSpeciesList[] = {
-
-    {
-        .species = SPECIES_SEEDOT,
-        .moves = {MOVE_BIDE, MOVE_HARDEN, MOVE_LEECH_SEED},
-        .level = 3,
-        .location = MAP_NUM(MAP_ROUTE102)
-    }
-};
-
 static const u8 *const sTVMassOutbreakTextGroup[] = {gTVMassOutbreakText00};
 
 static void DoTVShowPokemonNewsMassOutbreak(void) {
@@ -65,36 +49,36 @@ static void DoTVShowPokemonNewsMassOutbreak(void) {
 }
 
 void TryStartGBAEncounters(void) {
-  u8 i;
-  u16 outbreakIdx;
-  TVShow *show;
+    u8 i;
+    u16 outbreakIdx;
+    TVShow *show;
 
-  for (i = 0; i < LAST_TVSHOW_IDX; i++) {
-    if (gSaveBlock1Ptr->tvShows[i].common.kind == TVSHOW_MASS_OUTBREAK)
-      return;
-  }
-
-  outbreakIdx = 0;
-  show = &gSaveBlock1Ptr->tvShows[0];
-  show->massOutbreak.kind = TVSHOW_MASS_OUTBREAK;
-  show->massOutbreak.active = TRUE;
-  show->massOutbreak.level = sPokeOutbreakSpeciesList[outbreakIdx].level;
-  show->massOutbreak.unused1 = 0;
-  show->massOutbreak.unused3 = 0;
-  show->massOutbreak.species = sPokeOutbreakSpeciesList[outbreakIdx].species;
-  show->massOutbreak.unused2 = 0;
-  show->massOutbreak.moves[0] = sPokeOutbreakSpeciesList[outbreakIdx].moves[0];
-  show->massOutbreak.moves[1] = sPokeOutbreakSpeciesList[outbreakIdx].moves[1];
-  show->massOutbreak.moves[2] = sPokeOutbreakSpeciesList[outbreakIdx].moves[2];
-  show->massOutbreak.moves[3] = sPokeOutbreakSpeciesList[outbreakIdx].moves[3];
-  show->massOutbreak.locationMapNum =
-      sPokeOutbreakSpeciesList[outbreakIdx].location;
-  show->massOutbreak.locationMapGroup = 0;
-  show->massOutbreak.unused4 = 0;
-  show->massOutbreak.probability = 100;
-  show->massOutbreak.unused5 = 0;
-  show->massOutbreak.daysLeft = 1;
-  show->massOutbreak.language = gGameLanguage;
+    if (FlagGet(FLAG_SYS_GAME_CLEAR)) {
+        for (i = 0; i < LAST_TVSHOW_IDX; i++) {
+            if (gSaveBlock1Ptr->tvShows[i].common.kind == TVSHOW_MASS_OUTBREAK)
+                return;
+        }
+        outbreakIdx = 0;
+        show = &gSaveBlock1Ptr->tvShows[0];
+        show->massOutbreak.kind = TVSHOW_MASS_OUTBREAK;
+        show->massOutbreak.active = TRUE;
+        show->massOutbreak.level = sPokeOutbreakSpeciesList[outbreakIdx].level;
+        show->massOutbreak.unused1 = 0;
+        show->massOutbreak.unused3 = 0;
+        show->massOutbreak.species = sPokeOutbreakSpeciesList[outbreakIdx].species;
+        show->massOutbreak.unused2 = 0;
+        show->massOutbreak.moves[0] = sPokeOutbreakSpeciesList[outbreakIdx].moves[0];
+        show->massOutbreak.moves[1] = sPokeOutbreakSpeciesList[outbreakIdx].moves[1];
+        show->massOutbreak.moves[2] = sPokeOutbreakSpeciesList[outbreakIdx].moves[2];
+        show->massOutbreak.moves[3] = sPokeOutbreakSpeciesList[outbreakIdx].moves[3];
+        show->massOutbreak.locationMapNum = sPokeOutbreakSpeciesList[outbreakIdx].location;
+        show->massOutbreak.locationMapGroup = 0;
+        show->massOutbreak.unused4 = 0;
+        show->massOutbreak.probability = 100;
+        show->massOutbreak.unused5 = 0;
+        show->massOutbreak.daysLeft = 1;
+        show->massOutbreak.language = gGameLanguage;
+    }
 }
 
 // THIS DOES NOT WORK CURRENTLY... FIX EVENTUALLY... TryStartGBAEncounters tries
@@ -228,9 +212,10 @@ static const struct {
     u16 moves[MAX_MON_MOVES];
     u8 level;
     u8 location;
-
-} sPokeOutbreakSpeciesListFR[] = {
-{
+}
+// Fire Red
+sPokeOutbreakSpeciesList[] = {
+    {
         .species = SPECIES_GROWLITHE,
         .moves = {MOVE_BITE, MOVE_ROAR},
         .level = 2,
@@ -246,13 +231,13 @@ static const struct {
         .species = SPECIES_CATERPIE,
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
-        .location = MAP_NUM(MAP_ROUTE204NORTH)
+        .location = MAP_NUM(MAP_ROUTE204_NORTH)
     },
     {
         .species = SPECIES_CATERPIE,
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
-        .location = MAP_NUM(MAP_ROUTE204SOUTH)
+        .location = MAP_NUM(MAP_ROUTE204)
     },
     {
         .species = SPECIES_EKANS,
@@ -415,29 +400,28 @@ static const struct {
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
         .location = MAP_NUM(MAP_WAYBACK_CAVE)
-    },
+    }
+};
 
 
-
-
-static const struct {
-    u16 species;
-    u16 moves[MAX_MON_MOVES];
-    u8 level;
-    u8 location;
-
-} sPokeOutbreakSpeciesListLG[] = {
+// static const struct {
+//     u16 species;
+//     u16 moves[MAX_MON_MOVES];
+//     u8 level;
+//     u8 location;
+// }
+sPokeOutbreakSpeciesListLG[] = {
     {
         .species = SPECIES_WEEDLE,
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
-        .location = MAP_NUM(MAP_ROUTE204NORTH)
+        .location = MAP_NUM(MAP_ROUTE204_NORTH)
     },
     {
         .species = SPECIES_WEEDLE,
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
-        .location = MAP_NUM(MAP_ROUTE204SOUTH)
+        .location = MAP_NUM(MAP_ROUTE204)
     },
     {
         .species = SPECIES_VULPIX,
@@ -582,17 +566,18 @@ static const struct {
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
         .location = MAP_NUM(MAP_WAYBACK_CAVE_SECRET)
-    },
+    }
+};
 
 
-
-static const struct {
-    u16 species;
-    u16 moves[MAX_MON_MOVES];
-    u8 level;
-    u8 location;
-
-} sPokeOutbreakSpeciesListR[] = {
+// static const struct {
+//     u16 species;
+//     u16 moves[MAX_MON_MOVES];
+//     u8 level;
+//     u8 location;
+//
+// }
+sPokeOutbreakSpeciesListR[] = {
     {
         .species = SPECIES_SEEDOT,
         .moves = {MOVE_BIDE, MOVE_HARDEN},
@@ -603,13 +588,13 @@ static const struct {
         .species = SPECIES_SEEDOT,
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
-        .location = MAP_NUM(MAP_ROUTE204NORTH)
+        .location = MAP_NUM(MAP_ROUTE204_NORTH)
     },
     {
         .species = SPECIES_SEEDOT,
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
-        .location = MAP_NUM(MAP_ROUTE204SOUTH)
+        .location = MAP_NUM(MAP_ROUTE204)
     },
     {
         .species = SPECIES_ZANGOOSE,
@@ -1054,15 +1039,17 @@ static const struct {
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
         .location = MAP_NUM(MAP_WAYBACK_CAVE)
-    },
+    }
+};
 
 
-static const struct {
-    u16 species;
-    u16 moves[MAX_MON_MOVES];
-    u8 level;
-    u8 location;
-} sPokeOutbreakSpeciesListS[] = {
+// static const struct {
+//     u16 species;
+//     u16 moves[MAX_MON_MOVES];
+//     u8 level;
+//     u8 location;
+// }
+sPokeOutbreakSpeciesListS[] = {
     {
         .species = SPECIES_LOTAD,
         .moves = {MOVE_ASTONISH, MOVE_GROWL, MOVE_ABSORB},
@@ -1073,13 +1060,13 @@ static const struct {
         .species = SPECIES_LOTAD,
         .moves = {MOVE_ASTONISH, MOVE_GROWL, MOVE_ABSORB},
         .level = 2, // FIX
-        .location = MAP_NUM(MAP_ROUTE204NORTH)
+        .location = MAP_NUM(MAP_ROUTE204_NORTH)
     },
     {
         .species = SPECIES_LOTAD,
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
-        .location = MAP_NUM(MAP_ROUTE204SOUTH)
+        .location = MAP_NUM(MAP_ROUTE204)
     },
     {
         .species = SPECIES_LOTAD,
@@ -1518,17 +1505,18 @@ static const struct {
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
         .location = MAP_NUM(MAP_WAYBACK_CAVE)
-    },
+    }
+};
 
 
-
-static const struct {
-    u16 species;
-    u16 moves[MAX_MON_MOVES];
-    u8 level;
-    u8 location;
-
-} sPokeOutbreakSpeciesListE[] = {
+// static const struct {
+//     u16 species;
+//     u16 moves[MAX_MON_MOVES];
+//     u8 level;
+//     u8 location;
+//
+// }
+sPokeOutbreakSpeciesListE[] = {
     {
         .species = SPECIES_PINECO,
         .moves = {MOVE_TACKLE, MOVE_PROTECT},
@@ -1539,13 +1527,13 @@ static const struct {
         .species = SPECIES_PINECO,
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
-        .location = MAP_NUM(MAP_ROUTE204NORTH)
+        .location = MAP_NUM(MAP_ROUTE204_NORTH)
     },
     {
         .species = SPECIES_PINECO,
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
-        .location = MAP_NUM(MAP_ROUTE204SOUTH)
+        .location = MAP_NUM(MAP_Route204)
     },
     {
         .species = SPECIES_PINECO,
@@ -1714,6 +1702,7 @@ static const struct {
         .moves = {MOVE_BITE, MOVE_ROAR}, // FIX
         .level = 2, // FIX
         .location = MAP_NUM(MAP_WAYBACK_CAVE)
-    },
+    }
+};
 
 
