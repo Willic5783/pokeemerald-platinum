@@ -358,22 +358,22 @@ SandgemTown_ProfessorRowansLab_Text_PiplupDawn:
 	.string "Dawn: The Pokémon that I used for\n"
 	.string "the first time was a PIPLUP!\p"
 	.string "If you would have chosen\n"
-	.string "a PIPLUP at the lake, we'd have the same\l"
-	.string "Pokémon now!$"
+	.string "a PIPLUP at the lake, we'd have the\l"
+	.string "same Pokémon now!$"
 
 SandgemTown_ProfessorRowansLab_Text_TurtwigDawn:
 	.string "Dawn: The Pokémon that I used for\n"
 	.string "the first time was a TURTWIG!\p"
 	.string "If you would have chosen\n"
-	.string "a TURTWIG at the lake, we'd have the same\l"
-	.string "Pokémon now!$"
+	.string "a TURTWIG at the lake, we'd have the\l"
+	.string "same Pokémon now!$"
 
 SandgemTown_ProfessorRowansLab_Text_ChimcharDawn:
 	.string "Dawn: The Pokémon that I used for\n"
 	.string "the first time was a CHIMCHAR!\p"
 	.string "If you would have chosen\n"
-	.string "a CHIMCHAR at the lake, we'd have the same\l"
-	.string "Pokémon now!$"
+	.string "a CHIMCHAR at the lake, we'd have the\l"
+	.string "same Pokémon now!$"
 
 SandgemTown_ProfessorRowansLab_Text_LikeYouDawn:
 	.string "Not that it matters, but...\p"
@@ -440,15 +440,3 @@ SandgemTown_ProfessorRowansLab_Text_OtherAide:
 	.string "Professor Rowan invented a new\n"
 	.string "Pokédex while working alongside a\l"
 	.string "professor from the Kanto region!$"
-
-@ SandgemTown_ProfessorRowansLab_EventScript_CheckReadyForJohtoStarter::
-@ 	specialvar VAR_RESULT, HasAllHoennMons
-@ 	goto_if_eq VAR_RESULT, TRUE, SandgemTown_ProfessorRowansLab_EventScript_SetReadyForJohtoStarter
-@ 	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
-@ 	setobjectxyperm LOCALID_RIVAL, 5, 10
-@ 	end
-
-@ SandgemTown_ProfessorRowansLab_EventScript_SetAfterJohtoStarterLayout::
-@ 	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
-@ 	setobjectxyperm LOCALID_RIVAL, 5, 10
-@ 	end

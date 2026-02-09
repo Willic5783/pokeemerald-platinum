@@ -74,7 +74,23 @@ Common_Movement_WalkInPlaceRight:
 @ End of follower-safe movements
 Common_Movement_FollowerSafeEnd::
 	step_end
-	
+
+Common_Movement_WalkUp6:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Common_Movement_WalkUp4:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
 Common_Movement_Delay32:
 	delay_16
 	delay_16

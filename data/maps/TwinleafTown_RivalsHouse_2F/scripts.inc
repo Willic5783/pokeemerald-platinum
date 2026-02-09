@@ -49,6 +49,7 @@ TwinleafTown_RivalsHouse_2F_EventScript_MeetRival::
 	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, TwinleafTown_RivalsHouse_2F_Movement_RivalRun2
 	waitmovement 0
 	removeobject LOCALID_TWINLEAF_RIVAL2F_RIVAL
+	setflag FLAG_HIDE_RIVAL_HOUSE_RIVAL
 	release
 	end
 
@@ -75,8 +76,7 @@ TwinleafTown_RivalsHouse_2F_TakeBag:
 	.string "{RIVAL}: ...I'd better take\n"
 	.string "my Bag and Journal, too...$"
 
-@ TODO: Add dollar sign ₽
 TwinleafTown_RivalsHouse_2F_GoingLake:
 	.string "Oh hey! {PLAYER}!\p"
 	.string "I'll be waiting on the road!\n"
-	.string "It's a ¥10 million fine if you're late!$"
+	.string "It's a ₽10 million fine if you're late!$"
