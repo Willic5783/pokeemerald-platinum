@@ -8,7 +8,7 @@ SandgemTown_PokemonCenter_2F_EventScript_TrainerCard::
 SandgemTown_PokemonCenter_2F_EventScript_UnionRoom::
 	call EventScript_PkmnCenterNurse_UnionRoom
 	end
-
+	
 SandgemTown_PokemonCenter_2F_EventScript_Colosseum::
 	call EventScript_PkmnCenterNurse_Colosseum
 	end

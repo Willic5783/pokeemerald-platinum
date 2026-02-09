@@ -61,4 +61,3 @@ SandgemTown_PokemonCenter_1F_Text_WorkingUnderground:
 	.string "We are working underground right now.\n"
 	.string "It's off-limits to the public.\p"
 	.string "Please try later on.$"
-
