@@ -309,3 +309,6 @@ const u16 gMetatileAttributes_JubilifeSchool[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_CommonCenter2F[] = INCBIN_U16("data/tilesets/secondary/common_center_2f/metatiles.bin");
 const u16 gMetatileAttributes_CommonCenter2F[] = INCBIN_U16("data/tilesets/secondary/common_center_2f/metatile_attributes.bin");
+
+const u16 gMetatiles_General_Sinnoh[] = INCBIN_U16("data/tilesets/primary/general_sinnoh/metatiles.bin");
+const u16 gMetatileAttributes_General_Sinnoh[] = INCBIN_U16("data/tilesets/primary/general_sinnoh/metatile_attributes.bin");

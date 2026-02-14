@@ -242,7 +242,7 @@ TwinleafTown_PlayersHouse_1F_EventScript_MomAdventure::
 
 TwinleafTown_PlayersHouse_1F_Movement_RivalMomEnter:
 	walk_up
-	walk_in_place_right
+// 	walk_in_place_right
 	step_end
 
 TwinleafTown_PlayersHouse_1F_EventScript_PlayerTurnWest::

@@ -1204,3 +1204,14 @@ const struct Tileset gTileset_CommonCenter2F =
     .metatileAttributes = gMetatileAttributes_CommonCenter2F,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_General_Sinnoh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Sinnoh,
+    .palettes = gTilesetPalettes_General_Sinnoh,
+    .metatiles = gMetatiles_General_Sinnoh,
+    .metatileAttributes = gMetatileAttributes_General_Sinnoh,
+    .callback = NULL,
+};
