@@ -18,6 +18,10 @@ static const struct SpriteFrameImage sPicTable_ProfRowan[] = {
     overworld_ascending_frames(gObjectEventPic_ProfRowan, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_BugCatcherPt[] = {
+    overworld_ascending_frames(gObjectEventPic_BugCatcherPt, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
     overworld_ascending_frames(gObjectEventPic_BrendanNormalRunning, 2, 4),
 };
