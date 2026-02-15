@@ -1,4 +1,4 @@
-#include "object_event_graphics_info.h"
+// #include "object_event_graphics_info.h"
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
@@ -249,6 +249,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DawnNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Barry;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Johanna;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfRowan;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugCatcherPt;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
