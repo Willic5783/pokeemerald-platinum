@@ -271,11 +271,12 @@
 #define OBJ_EVENT_GFX_JOHANNA                    264
 #define OBJ_EVENT_GFX_PROF_ROWAN                 265
 #define OBJ_EVENT_GFX_BUG_CATCHER_PT             266
+#define OBJ_EVENT_GFX_ACE_TRAINER_PT             267
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        267
+#define NUM_OBJ_EVENT_GFX                        268
 
 
 // These are dynamic object gfx ids.
@@ -451,6 +452,7 @@
 #define OBJ_EVENT_PAL_TAG_JOHANNA                 0x1130
 #define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1131
 #define OBJ_EVENT_PAL_TAG_BUG_CATCHER_PT          0x1132
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_PT          0x1133
 
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
