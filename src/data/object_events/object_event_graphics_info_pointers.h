@@ -251,6 +251,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Johanna;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfRowan;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugCatcherPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RoughneckPt;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;

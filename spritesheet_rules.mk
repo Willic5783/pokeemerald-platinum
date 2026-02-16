@@ -31,6 +31,9 @@ $(OBJEVENTGFXDIR)/people/bug_catcher_pt.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/ace_trainer_pt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/roughneck_pt.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 $(OBJEVENTGFXDIR)/people/brendan/walking.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
