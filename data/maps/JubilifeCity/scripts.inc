@@ -56,3 +56,11 @@ JubilifeCity_EventScript_Dawn::
 
 JubilifeCity_EventScript_Lucas::
 	end
+
+Route201_EventScript_Spoooooooky_Ghost_NPCs::
+    msgbox JubilifeCity_Spooky_Ghosts, MSGBOX_SIGN
+    end
+
+JubilifeCity_Spooky_Ghosts:
+    .string "OOOoooohhhh! I'm a spooky ghooost!\n"
+    .string "And the new sprites aren't wooorking!$"

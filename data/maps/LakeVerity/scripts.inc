@@ -94,8 +94,8 @@ LakeVerity_EventScript_IntroScene::
 	applymovement LOCALID_LAKE_VERITY_RIVAL, LakeVerity_Movement_RivalLeave
 	waitmovement 0
 	playse SE_EXIT
-	destroyfollowernpc
-//    destroyobject LOCALID_LAKE_VERITY_RIVAL
+    removeobject LOCALID_LAKE_VERITY_RIVAL
+    destroyfollowernpc
 	special RemoveCameraObject
 	setflag FLAG_LAKE_VERITY_INTRO_EVENT
 	release

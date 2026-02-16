@@ -30,6 +30,10 @@ static const struct SpriteFrameImage sPicTable_RoughneckPt[] = {
     overworld_ascending_frames(gObjectEventPic_RoughneckPt, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_RuinManiacPt[] = {
+    overworld_ascending_frames(gObjectEventPic_RuinManiacPt, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {
     overworld_ascending_frames(gObjectEventPic_BrendanNormalRunning, 2, 4),
 };
