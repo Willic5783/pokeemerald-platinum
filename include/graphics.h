@@ -3362,6 +3362,18 @@ extern const u16 gObjectEventPal_BugCatcherPt[];
 extern const u16 gObjectEventPal_AceTrainerMPt[];
 extern const u16 gObjectEventPal_RoughneckPt[];
 extern const u16 gObjectEventPal_RuinManiacPt[];
+extern const u16 gObjectEventPal_BlackBeltPt[];
+extern const u16 gObjectEventPal_MaidPt[];
+extern const u16 gObjectEventPal_RichBoyPt[];
+extern const u16 gObjectEventPal_PsychicPt[];
+extern const u16 gObjectEventPal_LassPt[];
+extern const u16 gObjectEventPal_BattleGirlPt[];
+extern const u16 gObjectEventPal_BeautyPt[];
+extern const u16 gObjectEventPal_AceTrainerFPt[];
+extern const u16 gObjectEventPal_IdolPt[];
+extern const u16 gObjectEventPal_SocialitePt[];
+extern const u16 gObjectEventPal_CowgirlPt[];
+extern const u16 gObjectEventPal_LadyPt[];
 
 
 // Mail

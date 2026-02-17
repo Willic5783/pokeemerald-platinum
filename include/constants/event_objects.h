@@ -274,12 +274,23 @@
 #define OBJ_EVENT_GFX_ACE_TRAINER_M_PT           267
 #define OBJ_EVENT_GFX_ROUGHNECK_PT               268
 #define OBJ_EVENT_GFX_RUIN_MANIAC_PT             269
-
+#define OBJ_EVENT_GFX_BLACK_BELT_PT              270
+#define OBJ_EVENT_GFX_MAID_PT                    271
+#define OBJ_EVENT_GFX_RICH_BOY_PT                272
+#define OBJ_EVENT_GFX_PSYCHIC_PT                 273
+#define OBJ_EVENT_GFX_LASS_PT                    274
+#define OBJ_EVENT_GFX_BATTLE_GIRL_PT             275
+#define OBJ_EVENT_GFX_BEAUTY_PT                  276
+#define OBJ_EVENT_GFX_ACE_TRAINER_F_PT           277
+#define OBJ_EVENT_GFX_IDOL_PT                    278
+#define OBJ_EVENT_GFX_SOCIALITE_PT               279
+#define OBJ_EVENT_GFX_COWGIRL_PT                 280
+#define OBJ_EVENT_GFX_LADY_PT                    281
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        270
+#define NUM_OBJ_EVENT_GFX                        282
 
 
 // These are dynamic object gfx ids.
@@ -458,6 +469,18 @@
 #define OBJ_EVENT_PAL_TAG_ACE_TRAINER_M_PT        0x1133
 #define OBJ_EVENT_PAL_TAG_ROUGHNECK_PT            0x1134
 #define OBJ_EVENT_PAL_TAG_RUIN_MANIAC_PT          0x1135
+#define OBJ_EVENT_PAL_TAG_BLACK_BELT_PT           0x1136
+#define OBJ_EVENT_PAL_TAG_MAID_PT                 0x1137
+#define OBJ_EVENT_PAL_TAG_RICH_BOY_PT             0x1138
+#define OBJ_EVENT_PAL_TAG_PSYCHIC_PT              0x1139
+#define OBJ_EVENT_PAL_TAG_LASS_PT                 0x1140
+#define OBJ_EVENT_PAL_TAG_BATTLE_GIRL_PT          0x1141
+#define OBJ_EVENT_PAL_TAG_BEAUTY_PT               0x1142
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_F_PT        0x1143
+#define OBJ_EVENT_PAL_TAG_IDOL_PT                 0x1144
+#define OBJ_EVENT_PAL_TAG_SOCIALITE_PT            0x1145
+#define OBJ_EVENT_PAL_TAG_COWGIRL_PT              0x1146
+#define OBJ_EVENT_PAL_TAG_LADY_PT                 0x1147
 
 
 // Used as a placeholder follower graphic

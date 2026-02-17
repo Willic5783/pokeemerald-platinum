@@ -1,4 +1,3 @@
-// #include "object_event_graphics_info.h"
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
@@ -253,6 +252,18 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugCatcherP
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerMPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RoughneckPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RuinManiacPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlackBeltPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MaidPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RichBoyPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PsychicPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LassPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BattleGirlPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BeautyPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerFPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_IdolPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SocialitePt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CowgirlPt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LadyPt;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
@@ -534,6 +545,18 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ACE_TRAINER_M_PT] =         &gObjectEventGraphicsInfo_AceTrainerMPt,
     [OBJ_EVENT_GFX_ROUGHNECK_PT] =             &gObjectEventGraphicsInfo_RoughneckPt,
     [OBJ_EVENT_GFX_RUIN_MANIAC_PT] =           &gObjectEventGraphicsInfo_RuinManiacPt,
+    [OBJ_EVENT_GFX_BLACK_BELT_PT] =            &gObjectEventGraphicsInfo_BlackBeltPt,
+    [OBJ_EVENT_GFX_MAID_PT] =                  &gObjectEventGraphicsInfo_MaidPt,
+    [OBJ_EVENT_GFX_RICH_BOY_PT] =              &gObjectEventGraphicsInfo_RichBoyPt,
+    [OBJ_EVENT_GFX_PSYCHIC_PT] =               &gObjectEventGraphicsInfo_PsychicPt,
+    [OBJ_EVENT_GFX_LASS_PT] =                  &gObjectEventGraphicsInfo_LassPt,
+    [OBJ_EVENT_GFX_BATTLE_GIRL_PT] =           &gObjectEventGraphicsInfo_BattleGirlPt,
+    [OBJ_EVENT_GFX_BEAUTY_PT] =                &gObjectEventGraphicsInfo_BeautyPt,
+    [OBJ_EVENT_GFX_ACE_TRAINER_F_PT] =         &gObjectEventGraphicsInfo_AceTrainerFPt,
+    [OBJ_EVENT_GFX_IDOL_PT] =                  &gObjectEventGraphicsInfo_IdolPt,
+    [OBJ_EVENT_GFX_SOCIALITE_PT] =             &gObjectEventGraphicsInfo_SocialitePt,
+    [OBJ_EVENT_GFX_COWGIRL_PT] =               &gObjectEventGraphicsInfo_CowgirlPt,
+    [OBJ_EVENT_GFX_LADY_PT] =                  &gObjectEventGraphicsInfo_LadyPt,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

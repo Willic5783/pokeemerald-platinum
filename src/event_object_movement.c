@@ -533,6 +533,18 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_AceTrainerMPt,         OBJ_EVENT_PAL_TAG_ACE_TRAINER_M_PT},
     {gObjectEventPal_RoughneckPt,           OBJ_EVENT_PAL_TAG_ROUGHNECK_PT},
     {gObjectEventPal_RuinManiacPt,          OBJ_EVENT_PAL_TAG_RUIN_MANIAC_PT},
+    {gObjectEventPal_BlackBeltPt,           OBJ_EVENT_PAL_TAG_BLACK_BELT_PT},
+    {gObjectEventPal_MaidPt,                OBJ_EVENT_PAL_TAG_MAID_PT},
+    {gObjectEventPal_RichBoyPt,             OBJ_EVENT_PAL_TAG_RICH_BOY_PT},
+    {gObjectEventPal_PsychicPt,             OBJ_EVENT_PAL_TAG_PSYCHIC_PT},
+    {gObjectEventPal_LassPt,                OBJ_EVENT_PAL_TAG_LASS_PT},
+    {gObjectEventPal_BattleGirlPt,          OBJ_EVENT_PAL_TAG_BATTLE_GIRL_PT},
+    {gObjectEventPal_BeautyPt,              OBJ_EVENT_PAL_TAG_BEAUTY_PT},
+    {gObjectEventPal_AceTrainerFPt,         OBJ_EVENT_PAL_TAG_ACE_TRAINER_F_PT},
+    {gObjectEventPal_IdolPt,                OBJ_EVENT_PAL_TAG_IDOL_PT},
+    {gObjectEventPal_SocialitePt,           OBJ_EVENT_PAL_TAG_SOCIALITE_PT},
+    {gObjectEventPal_CowgirlPt,             OBJ_EVENT_PAL_TAG_COWGIRL_PT},
+    {gObjectEventPal_LadyPt,                OBJ_EVENT_PAL_TAG_LADY_PT},
 
 
 #if OW_FOLLOWERS_POKEBALLS
