@@ -112,9 +112,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BugCatcherPt = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerPt = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerMPt = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_ACE_TRAINER_PT,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ACE_TRAINER_M_PT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,
@@ -127,7 +127,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AceTrainerPt = {
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_AceTrainerPt,
+    .images = sPicTable_AceTrainerMPt,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 

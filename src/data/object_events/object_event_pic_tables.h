@@ -22,8 +22,8 @@ static const struct SpriteFrameImage sPicTable_BugCatcherPt[] = {
     overworld_ascending_frames(gObjectEventPic_BugCatcherPt, 4, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_AceTrainerPt[] = {
-    overworld_ascending_frames(gObjectEventPic_AceTrainerPt, 4, 4),
+static const struct SpriteFrameImage sPicTable_AceTrainerMPt[] = {
+    overworld_ascending_frames(gObjectEventPic_AceTrainerMPt, 4, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_RoughneckPt[] = {

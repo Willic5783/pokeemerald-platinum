@@ -271,7 +271,7 @@
 #define OBJ_EVENT_GFX_JOHANNA                    264
 #define OBJ_EVENT_GFX_PROF_ROWAN                 265
 #define OBJ_EVENT_GFX_BUG_CATCHER_PT             266
-#define OBJ_EVENT_GFX_ACE_TRAINER_PT             267
+#define OBJ_EVENT_GFX_ACE_TRAINER_M_PT           267
 #define OBJ_EVENT_GFX_ROUGHNECK_PT               268
 #define OBJ_EVENT_GFX_RUIN_MANIAC_PT             269
 
@@ -455,7 +455,7 @@
 #define OBJ_EVENT_PAL_TAG_JOHANNA                 0x1130
 #define OBJ_EVENT_PAL_TAG_PROF_ROWAN              0x1131
 #define OBJ_EVENT_PAL_TAG_BUG_CATCHER_PT          0x1132
-#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_PT          0x1133
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_M_PT        0x1133
 #define OBJ_EVENT_PAL_TAG_ROUGHNECK_PT            0x1134
 #define OBJ_EVENT_PAL_TAG_RUIN_MANIAC_PT          0x1135
 
