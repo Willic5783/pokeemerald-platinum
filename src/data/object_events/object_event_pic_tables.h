@@ -414,8 +414,36 @@ static const struct SpriteFrameImage sPicTable_CynthiaPt[] = {
     overworld_ascending_frames(gObjectEventPic_CynthiaPt, 4, 4),
 };
 
-// static const struct SpriteFrameImage sPicTable_CynthiaPt[] = {
-    // overworld_ascending_frames(gObjectEventPic_CynthiaPt, 4, 4),
+// static const struct SpriteFrameImage sPicTable_GalacticCharonPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_GalacticCharonPt, 4, 4),
+// };
+
+// static const struct SpriteFrameImage sPicTable_RileyPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_RileyPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_CherylPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_CherylPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_ParasolLadyPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_ParasolLadyPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_BuckPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_BuckPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_MarleyPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_MarleyPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_MiraPt[] = {
+//     overworld_ascending_frames(gObjectEventPic_MiraPt, 4, 4), // THIS WON'T BE CORRECT
+// };
+
+// static const struct SpriteFrameImage sPicTable_Pt[] = {
+    // overworld_ascending_frames(gObjectEventPic_Pt, 4, 4),
 // };
 
 static const struct SpriteFrameImage sPicTable_BrendanNormal[] = {

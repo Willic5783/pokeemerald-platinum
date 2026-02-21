@@ -3457,6 +3457,17 @@ extern const u16 gObjectEventPal_BerthaPt[];
 extern const u16 gObjectEventPal_FlintPt[];
 extern const u16 gObjectEventPal_LucianPt[];
 extern const u16 gObjectEventPal_CynthiaPt[];
+// extern const u16 gObjectEventPal_GalacticCharonPt[];
+// extern const u16 gObjectEventPal_RileyPt[];
+// extern const u16 gObjectEventPal_CherylPt[];
+// extern const u16 gObjectEventPal_ParasolLadyPt[];
+// extern const u16 gObjectEventPal_BuckPt[];
+// extern const u16 gObjectEventPal_MarleyPt[];
+// extern const u16 gObjectEventPal_MiraPt[];
+// extern const u16 gObjectEventPal_ThorntonPt[];
+// extern const u16 gObjectEventPal_ArgentaPt[];
+// extern const u16 gObjectEventPal_DarachPt[];
+// extern const u16 gObjectEventPal_DahliaPt[];
 // extern const u16 gObjectEventPal_Pt[];
 
 

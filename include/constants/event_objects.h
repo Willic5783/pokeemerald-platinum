@@ -369,12 +369,24 @@
 #define OBJ_EVENT_GFX_FLINT_PT                   362
 #define OBJ_EVENT_GFX_LUCIAN_PT                  363
 #define OBJ_EVENT_GFX_CYNTHIA_PT                 364
+// #define OBJ_EVENT_GFX_GALACTIC_CHARON_PT      365
+// #define OBJ_EVENT_GFX_RILEY_PT                366
+// #define OBJ_EVENT_GFX_CHERYL_PT               367
+// #define OBJ_EVENT_GFX_PARASOL_LADY_PT         368
+// #define OBJ_EVENT_GFX_BUCK_PT                 369
+// #define OBJ_EVENT_GFX_MARLEY_PT               370
+// #define OBJ_EVENT_GFX_MIRA_PT                 371
+// #define OBJ_EVENT_GFX_THORNTON_PT             372
+// #define OBJ_EVENT_GFX_ARGENTA_PT              373
+// #define OBJ_EVENT_GFX_DARACH_PT               374
+// #define OBJ_EVENT_GFX_DAHLIA_PT               375
 // #define OBJ_EVENT_GFX__PT                 3
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
 #define NUM_OBJ_EVENT_GFX                        365
+// #define NUM_OBJ_EVENT_GFX                        376
 
 
 // These are dynamic object gfx ids.
@@ -648,6 +660,17 @@
 #define OBJ_EVENT_PAL_TAG_FLINT_PT                0x1228
 #define OBJ_EVENT_PAL_TAG_LUCIAN_PT               0x1229
 #define OBJ_EVENT_PAL_TAG_CYNTHIA_PT              0x1230
+// #define OBJ_EVENT_PAL_TAG_GALACTIC_CHARON_PT      0x1231
+// #define OBJ_EVENT_PAL_TAG_RILEY_PT                0x1232
+// #define OBJ_EVENT_PAL_TAG_CHERYL_PT               0x1233
+// #define OBJ_EVENT_PAL_TAG_PARASOL_LADY_PT         0x1234
+// #define OBJ_EVENT_PAL_TAG_BUCK_PT                 0x1235
+// #define OBJ_EVENT_PAL_TAG_MARLEY_PT               0x1236
+// #define OBJ_EVENT_PAL_TAG_MIRA_PT                 0x1237
+// #define OBJ_EVENT_PAL_TAG_THORNTON_PT             0x1238
+// #define OBJ_EVENT_PAL_TAG_ARGENTA_PT              0x1239
+// #define OBJ_EVENT_PAL_TAG_DARACH_PT               0x1240
+// #define OBJ_EVENT_PAL_TAG_DAHLIA_PT               0x1241
 // #define OBJ_EVENT_PAL_TAG__PT              0x123
 
 

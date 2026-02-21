@@ -322,6 +322,30 @@ $(OBJEVENTGFXDIR)/people/lucian_pt.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/cynthia_pt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+#$(OBJEVENTGFXDIR)/people/galactic_charon_pt.4bpp: %.4bpp: %.png
+#	$(GFX) $< $@ -mwidth 4 -mheight 4
+#
+#$(OBJEVENTGFXDIR)/people/riley_pt.4bpp: %.4bpp: %.png
+#	$(GFX) $< $@ -mwidth 4 -mheight 4
+#
+#$(OBJEVENTGFXDIR)/people/cheryl_pt.4bpp: %.4bpp: %.png
+#	$(GFX) $< $@ -mwidth 4 -mheight 4
+#
+#$(OBJEVENTGFXDIR)/people/parasol_lady_pt.4bpp: %.4bpp: %.png
+#	$(GFX) $< $@ -mwidth 4 -mheight 4
+#
+#$(OBJEVENTGFXDIR)/people/buck_pt.4bpp: %.4bpp: %.png
+#	$(GFX) $< $@ -mwidth 4 -mheight 4
+#
+#$(OBJEVENTGFXDIR)/people/marley_pt.4bpp: %.4bpp: %.png
+#	$(GFX) $< $@ -mwidth 4 -mheight 4
+#
+#$(OBJEVENTGFXDIR)/people/mira_pt.4bpp: %.4bpp: %.png
+#	$(GFX) $< $@ -mwidth 4 -mheight 4
+#
+#$(OBJEVENTGFXDIR)/people/_pt.4bpp: %.4bpp: %.png
+#	$(GFX) $< $@ -mwidth 4 -mheight 4
+#
 $(OBJEVENTGFXDIR)/people/brendan/walking.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 

@@ -628,6 +628,13 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_FlintPt,               OBJ_EVENT_PAL_TAG_FLINT_PT},
     {gObjectEventPal_LucianPt,              OBJ_EVENT_PAL_TAG_LUCIAN_PT},
     {gObjectEventPal_CynthiaPt,             OBJ_EVENT_PAL_TAG_CYNTHIA_PT},
+    // {gObjectEventPal_GalacticCharonPt,      OBJ_EVENT_PAL_TAG_GALACTIC_CHARON_PT},
+    // {gObjectEventPal_RileyPt,               OBJ_EVENT_PAL_TAG_RILEY_PT},
+    // {gObjectEventPal_CherylPt,              OBJ_EVENT_PAL_TAG_CHERYL_PT},
+    // {gObjectEventPal_ParasolLadyPt,         OBJ_EVENT_PAL_TAG_PARASOL_LADY_PT},
+    // {gObjectEventPal_BuckPt,                OBJ_EVENT_PAL_TAG_BUCK_PT},
+    // {gObjectEventPal_MarleyPt,              OBJ_EVENT_PAL_TAG_MARLEY_PT},
+    // {gObjectEventPal_MiraPt,                OBJ_EVENT_PAL_TAG_MIRA_PT},
     // {gObjectEventPal_Pt,           OBJ_EVENT_PAL_TAG__PT},
 
 

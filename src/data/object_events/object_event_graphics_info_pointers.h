@@ -348,6 +348,12 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BerthaPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FlintPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LucianPt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CynthiaPt;
+// extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RileyPt;
+// extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CherylPt;
+// extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ParasolLadyPt;
+// extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BuckPt;
+// extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MarleyPt;
+// extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MiraPt;
 // extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pt;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
@@ -724,6 +730,17 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_FLINT_PT] =                 &gObjectEventGraphicsInfo_FlintPt,
     [OBJ_EVENT_GFX_LUCIAN_PT] =                &gObjectEventGraphicsInfo_LucianPt,
     [OBJ_EVENT_GFX_CYNTHIA_PT] =               &gObjectEventGraphicsInfo_CynthiaPt,
+    // [OBJ_EVENT_GFX_GALACTIC_CHARON_PT] =       &gObjectEventGraphicsInfo_GalacticCharonPt,
+    // [OBJ_EVENT_GFX_RILEY_PT] =                 &gObjectEventGraphicsInfo_RileyPt,
+    // [OBJ_EVENT_GFX_CHERYL_PT] =                &gObjectEventGraphicsInfo_CherylPt,
+    // [OBJ_EVENT_GFX_PARASOL_LADY_PT] =          &gObjectEventGraphicsInfo_ParasolLadyPt,
+    // [OBJ_EVENT_GFX_BUCK_PT] =                  &gObjectEventGraphicsInfo_BuckPt,
+    // [OBJ_EVENT_GFX_MARLEY_PT] =                &gObjectEventGraphicsInfo_MarleyPt,
+    // [OBJ_EVENT_GFX_MIRA_PT] =                  &gObjectEventGraphicsInfo_MiraPt,
+    // [OBJ_EVENT_GFX_THORNTON_PT] =              &gObjectEventGraphicsInfo_ThorntonPt,
+    // [OBJ_EVENT_GFX_ARGENTA_PT] =               &gObjectEventGraphicsInfo_ArgentaPt,
+    // [OBJ_EVENT_GFX_DARACH_PT] =                &gObjectEventGraphicsInfo_DarachPt,
+    // [OBJ_EVENT_GFX_DAHLIA_PT] =                &gObjectEventGraphicsInfo_DahliaPt,
     // [OBJ_EVENT_GFX__PT] =               &gObjectEventGraphicsInfo_Pt,
 };
 
