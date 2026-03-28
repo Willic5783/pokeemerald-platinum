@@ -271,6 +271,9 @@ static void Task_NewGameRowanSpeech_ChooseGender(u8);
 static void NewGameRowanSpeech_ShowGenderMenu(void);
 static s8 NewGameRowanSpeech_ProcessGenderMenuInput(void);
 static void NewGameRowanSpeech_ClearGenderWindow(u8, u8);
+static void Task_NewGameRowanSpeech_CreateGenderYesNo(u8);
+static void Task_NewGameRowanSpeech_WaitAndCreateYesNo(u8);
+static void Task_NewGameRowanSpeech_ProcessGenderYesNoMenu(u8);
 static void Task_NewGameRowanSpeech_WhatsYourName(u8);
 static void Task_NewGameRowanSpeech_SlideOutOldGenderSprite(u8);
 static void Task_NewGameRowanSpeech_SlideInNewGenderSprite(u8);
@@ -478,37 +481,6 @@ static const struct WindowTemplate sNewGameBirchSpeechTextWindows[] =
     DUMMY_WIN_TEMPLATE
 };
 
-static const struct WindowTemplate sNewGameRowanSpeechTextWindows[] =
-{
-    {
-        .bg = 0,
-        .tilemapLeft = 2,
-        .tilemapTop = 15,
-        .width = 27,
-        .height = 4,
-        .paletteNum = 15,
-        .baseBlock = 1
-    },
-    {
-        .bg = 0,
-        .tilemapLeft = 3,
-        .tilemapTop = 5,
-        .width = 6,
-        .height = 4,
-        .paletteNum = 15,
-        .baseBlock = 0x6D
-    },
-    {
-        .bg = 0,
-        .tilemapLeft = 3,
-        .tilemapTop = 2,
-        .width = 9,
-        .height = 10,
-        .paletteNum = 15,
-        .baseBlock = 0x85
-    },
-    DUMMY_WIN_TEMPLATE
-};
 
 static const u16 sMainMenuBgPal[] = INCBIN_U16("graphics/interface/main_menu_bg.gbapal");
 static const u16 sMainMenuTextPal[] = INCBIN_U16("graphics/interface/main_menu_text.gbapal");
@@ -645,7 +617,6 @@ enum
 
 #define MAIN_MENU_BORDER_TILE   0x1D5
 #define BIRCH_DLG_BASE_TILE_NUM 0xFC
-#define ROWAN_DLG_BASE_TILE_NUM 0xFD
 
 static void CB2_MainMenu(void)
 {
@@ -1529,9 +1500,9 @@ static void Task_NewGameRowanSpeech_WaitForSpriteFadeInWelcome(u8 taskId)
         }
         else
         {
-            InitWindows(sNewGameRowanSpeechTextWindows);
+            InitWindows(sNewGameBirchSpeechTextWindows);
             LoadMainMenuWindowFrameTiles(0, 0xF3);
-            LoadMessageBoxGfx(0, ROWAN_DLG_BASE_TILE_NUM, BG_PLTT_ID(15));
+            LoadMessageBoxGfx(0, BIRCH_DLG_BASE_TILE_NUM, BG_PLTT_ID(15));
             NewGameRowanSpeech_ShowDialogueWindow(0, 1);
             PutWindowTilemap(0);
             CopyWindowToVram(0, COPYWIN_GFX);
@@ -1559,7 +1530,7 @@ static void Task_NewGameRowanSpeech_ThisIsAPokemon(u8 taskId)
     if (!gPaletteFade.active && !RunTextPrintersAndIsPrinter0Active())
     {
         gTasks[taskId].func = Task_NewGameRowanSpeech_MainSpeech;
-        StringExpandPlaceholders(gStringVar4, gText_ThisIsAPokemon);
+        StringExpandPlaceholders(gStringVar4, gText_Rowan_ThisIsAPokemon);
         AddTextPrinterWithCallbackForMessage(TRUE, NewGameRowanSpeech_WaitForThisIsPokemonText);
         sRowanSpeechMainTaskId = taskId;
     }
@@ -1896,13 +1867,13 @@ static void Task_NewGameRowanSpeech_ChooseGender(u8 taskId)
         PlaySE(SE_SELECT);
         gSaveBlock2Ptr->playerGender = gender;
         NewGameRowanSpeech_ClearGenderWindow(1, 1);
-        gTasks[taskId].func = Task_NewGameRowanSpeech_WhatsYourName;
+        gTasks[taskId].func = Task_NewGameRowanSpeech_CreateGenderYesNo;
         break;
     case FEMALE:
         PlaySE(SE_SELECT);
         gSaveBlock2Ptr->playerGender = gender;
         NewGameRowanSpeech_ClearGenderWindow(1, 1);
-        gTasks[taskId].func = Task_NewGameRowanSpeech_WhatsYourName;
+        gTasks[taskId].func = Task_NewGameRowanSpeech_CreateGenderYesNo;
         break;
     }
     gender2 = Menu_GetCursorPos();
@@ -1998,6 +1969,54 @@ static void Task_NewGameRowanSpeech_SlideInNewGenderSprite(u8 taskId)
             gSprites[spriteId].oam.objMode = ST_OAM_OBJ_NORMAL;
             gTasks[taskId].func = Task_NewGameRowanSpeech_ChooseGender;
         }
+    }
+}
+
+static void Task_NewGameRowanSpeech_CreateGenderYesNo(u8 taskId)
+{
+    int gender = NewGameBirchSpeech_ProcessGenderMenuInput();
+    if (gender == MALE || gender == FEMALE)
+    {
+        PlaySE(SE_SELECT);
+        gSaveBlock2Ptr->playerGender = gender;
+
+        NewGameBirchSpeech_ClearGenderWindow(1, 1);
+        NewGameRowanSpeech_ClearWindow(0);
+
+        if (gender == MALE)
+            StringExpandPlaceholders(gStringVar4, gText_Rowan_BoyConfirmation);
+        else
+            StringExpandPlaceholders(gStringVar4, gText_Rowan_GirlConfirmation);
+
+        AddTextPrinterForMessage(TRUE);
+        gTasks[taskId].func = Task_NewGameRowanSpeech_WaitAndCreateYesNo;
+        return;
+    }
+
+}
+static void Task_NewGameRowanSpeech_WaitAndCreateYesNo(u8 taskId)
+{
+    if (!RunTextPrintersAndIsPrinter0Active())
+    {
+        CreateYesNoMenuParameterized(2, 1, 0xF3, 0xDF, 2, 15);
+        gTasks[taskId].func = Task_NewGameRowanSpeech_ProcessGenderYesNoMenu;
+    }
+}
+
+static void Task_NewGameRowanSpeech_ProcessGenderYesNoMenu(u8 taskId)
+{
+    switch (Menu_ProcessInputNoWrapClearOnChoose())
+    {
+    case 0:
+        PlaySE(SE_SELECT);
+        gSprites[gTasks[taskId].tPlayerSpriteId].oam.objMode = ST_OAM_OBJ_BLEND;
+        gTasks[taskId].func = Task_NewGameRowanSpeech_WhatsYourName;
+        break;
+    case 1:
+    case MENU_B_PRESSED:
+        PlaySE(SE_SELECT);
+        gTasks[taskId].func = Task_NewGameRowanSpeech_BoyOrGirl;
+        break;
     }
 }
 
@@ -2574,7 +2593,7 @@ static void CB2_NewGameRowanSpeech_ReturnFromNamingScreen(void)
     REG_IME = savedIme;
     SetVBlankCallback(VBlankCB_MainMenu);
     SetMainCallback2(CB2_MainMenu);
-    InitWindows(sNewGameRowanSpeechTextWindows);
+    InitWindows(sNewGameBirchSpeechTextWindows);
     LoadMainMenuWindowFrameTiles(0, 0xF3);
     LoadMessageBoxGfx(0, BIRCH_DLG_BASE_TILE_NUM, BG_PLTT_ID(15));
     PutWindowTilemap(0);
@@ -2934,7 +2953,7 @@ static void NewGameBirchSpeech_ShowGenderMenu(void)
 
 static void NewGameRowanSpeech_ShowGenderMenu(void)
 {
-    DrawMainMenuWindowBorder(&sNewGameRowanSpeechTextWindows[1], 0xF3);
+    DrawMainMenuWindowBorder(&sNewGameBirchSpeechTextWindows[1], 0xF3);
     FillWindowPixelBuffer(1, PIXEL_FILL(1));
     PrintMenuTable(1, ARRAY_COUNT(sMenuActions_Gender), sMenuActions_Gender);
     InitMenuInUpperLeftCornerNormal(1, ARRAY_COUNT(sMenuActions_Gender), 0);

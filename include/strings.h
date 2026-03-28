@@ -264,13 +264,19 @@ extern const u8 gText_Birch_YourePlayer[];
 extern const u8 gText_Birch_AreYouReady[];
 
 extern const u8 gText_Rowan_Welcome[];
-extern const u8 gText_ThisIsAPokemon[];
+extern const u8 gText_Rowan_FirstAdventure[];
+extern const u8 gText_Rowan_ThisIsAPokemon[];
 extern const u8 gText_Rowan_MainSpeech[];
 extern const u8 gText_Rowan_AndYouAre[];
 extern const u8 gText_Rowan_BoyOrGirl[];
+extern const u8 gText_Rowan_BoyConfirmation[];
+extern const u8 gText_Rowan_GirlConfirmation[];
 extern const u8 gText_Rowan_WhatsYourName[];
 extern const u8 gText_Rowan_SoItsPlayer[];
 extern const u8 gText_Rowan_YourePlayer[];
+extern const u8 gText_Rowan_ThisBoyHere[];
+extern const u8 gText_Rowan_WhatsRivalsName[];
+extern const u8 gText_Rowan_RivalIsIt[];
 extern const u8 gText_Rowan_AreYouReady[];
 
 extern const u8 gText_BirchInTrouble[];

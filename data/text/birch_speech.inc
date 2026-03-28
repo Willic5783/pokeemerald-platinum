@@ -69,7 +69,7 @@ gText_Rowan_Welcome::
 	.string "the Pokémon Professor.\p"
 	.string "$"
 
-gText_Rowan_First_Adventure::
+gText_Rowan_FirstAdventure::
 	.string "Before I go any further, is this\n"
 	.string "your first adventure?\p"
 	.string "If you need advice, I'm certainly\n"
@@ -77,7 +77,7 @@ gText_Rowan_First_Adventure::
 	.string "$"
 
 
-gText_Rowan_Pokemon::
+gText_Rowan_ThisIsAPokemon::
 	.string "This world is widely inhabited by\n"
 	.string "creatures known as Pokémon.\p"
 	.string "Here, I have a Poké Ball.\p"
