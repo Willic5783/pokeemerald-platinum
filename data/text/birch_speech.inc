@@ -61,7 +61,7 @@ gText_Birch_AreYouReady::
 	.string "$"
 
 gText_Rowan_Welcome::
-	.string "Hello there!\p"
+	.string "Hello there!\n"
 	.string "It's so very nice to meet you!\p"
 	.string "Welcome to the world of Pokémon!\p"
 	.string "My name is Rowan.\p"
