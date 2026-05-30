@@ -8,6 +8,7 @@
     "gMapGroup_IndoorTwinleaf",
     "gMapGroup_IndoorSandgem",
     "gMapGroup_IndoorJubilife",
+    "gMapGroup_IndoorOreburgh",
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
@@ -99,6 +100,21 @@
     "JubilifeCity_PokemonCenter_1F",
     "JubilifeCity_PokemonCenter_2F",
     "JubilifeCity_Mart"
+  ],
+  "gMapGroup_IndoorOreburgh": [
+    "OreburghCity_TowerA_1F",
+    "OreburghCity_TowerA_2F",
+    "OreburghCity_TowerB_1F",
+    "OreburghCity_TowerB_2F",
+    "OreburghCity_TowerC_1F",
+    "OreburghCity_TowerC_2F",
+    "OreburghCity_HouseA",
+    "OreburghCity_HouseB",
+    "OreburghCity_HouseC",
+    "OreburghCity_PokemonCenter_1F",
+    "OreburghCity_PokemonCenter_2F",
+    "OreburghCity_Mart",
+    "OreburghCity_Gym"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

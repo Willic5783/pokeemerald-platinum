@@ -544,9 +544,9 @@ static void Task_AskConfirmStarter(u8 taskId)
 
     static const u8 *const sStarterConfirmStrings[] =
     {
-        gText_ConfirmStarterChoiceLT,
-        gText_ConfirmStarterChoiceMD,
-        gText_ConfirmStarterChoiceRT
+        gText_ConfirmStarterChoiceLeft,
+        gText_ConfirmStarterChoiceMiddle,
+        gText_ConfirmStarterChoiceRight
     };
 
     if (selection > 2)
@@ -570,6 +570,15 @@ static void Task_HandleConfirmStarterInput(u8 taskId)
         // Return the starter choice and exit.
         gSpecialVar_Result = gTasks[taskId].tStarterSelection;
         ResetAllPicSprites();
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0x10, 0, RGB_BLACK);
+
+        spriteId = gTasks[taskId].tPkmnSpriteId;
+        FreeOamMatrix(gSprites[spriteId].oam.matrixNum);
+        DestroySprite(&gSprites[spriteId]);
+
+        spriteId = gTasks[taskId].tCircleSpriteId;
+        FreeOamMatrix(gSprites[spriteId].oam.matrixNum);
+        DestroySprite(&gSprites[spriteId]);
         SetMainCallback2(gMain.savedCallback);
         break;
     case 1:  // NO

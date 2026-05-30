@@ -3290,6 +3290,11 @@ extern const u32 gKantoTrainerCardFront_Tilemap[];
 extern const u32 gHoennTrainerCardFrontLink_Tilemap[];
 extern const u32 gKantoTrainerCardFrontLink_Tilemap[];
 extern const u32 gHoennTrainerCardBg_Tilemap[];
+extern const u32 gSinnohTrainerCard_Gfx[];
+extern const u32 gSinnohTrainerCardBg_Tilemap[];
+extern const u32 gSinnohTrainerCardBack_Tilemap[];
+extern const u32 gSinnohTrainerCardFront_Tilemap[];
+extern const u32 gSinnohTrainerCardFrontLink_Tilemap[];
 
 // Frontier Pass
 extern const u32 gFrontierPassBg_Gfx[];
@@ -3352,12 +3357,12 @@ extern const u16 gFrontierFactoryMenu_Tilemap[];
 extern const u16 gFrontierFactoryMenu_Pal[];
 
 // Object event pals
-extern const u16 gObjectEventPal_Lucas[];
-extern const u16 gObjectEventPal_Dawn[];
 extern const u16 gObjectEventPal_Brendan[];
 extern const u16 gObjectEventPal_May[];
 extern const u16 gObjectEventPal_RubySapphireBrendan[];
 extern const u16 gObjectEventPal_RubySapphireMay[];
+extern const u16 gObjectEventPal_Lucas[];
+extern const u16 gObjectEventPal_Dawn[];
 extern const u16 gObjectEventPal_BugCatcherPt[];
 extern const u16 gObjectEventPal_AceTrainerMPt[];
 extern const u16 gObjectEventPal_RoughneckPt[];

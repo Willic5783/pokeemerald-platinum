@@ -10,7 +10,9 @@ OreburghCitySouth_EventScript_Worker1::
 	end
 
 OreburghCitySouth_EventScript_Machop1::
+	playmoncry SPECIES_MACHOP, CRY_MODE_ENCOUNTER
 	msgbox OreburghCitySouth_Text_Machop1, MSGBOX_NPC
+	waitmoncry
 	end
 
 OreburghCitySouth_EventScript_Worker2::
@@ -18,16 +20,18 @@ OreburghCitySouth_EventScript_Worker2::
 	end
 
 OreburghCitySouth_EventScript_Machop2::
+	playmoncry SPECIES_MACHOP, CRY_MODE_ENCOUNTER
 	msgbox OreburghCitySouth_Text_Machop2, MSGBOX_NPC
+	waitmoncry
 	end
 
 OreburghCitySouth_EventScript_WorkerSuperPotion::
-	goto_if_set FLAG_ITEM_OREBURGH_CITY_SUPER_POTION, OreburghCitySouth_EventScript_WorkerSuperPotionGiven
+	goto_if_set FLAG_OREBURGH_CITY_SUPER_POTION, OreburghCitySouth_EventScript_WorkerSuperPotionGiven
 	msgbox OreburghCitySouth_Text_NoQuestion, MSGBOX_DEFAULT
 	giveitem ITEM_SUPER_POTION
-	setflag FLAG_ITEM_OREBURGH_CITY_SUPER_POTION
-	msgbox OreburghCitySouth_Text_HaleHearty, MSGBOX_DEFAULT
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_OREBURGH_CITY_SUPER_POTION
+	msgbox OreburghCitySouth_Text_HaleHearty, MSGBOX_DEFAULT
 	closemessage
 	end
 
@@ -59,7 +63,6 @@ OreburghCitySouth_Text_Machop1:
 
 OreburghCitySouth_Text_ChopChop:
 	.string "Chop, chop, MACHOP!\n"
-	@ .string "Chop, chop away on rocks! ~$"
 	.string "Chop, chop away on rocks! ~$"
 
 OreburghCitySouth_Text_Machop2:

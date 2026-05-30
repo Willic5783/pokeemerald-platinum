@@ -1966,6 +1966,12 @@ const u32 gKantoTrainerCardFront_Tilemap[] = INCBIN_U32("graphics/trainer_card/f
 const u32 gKantoTrainerCardBack_Tilemap[] = INCBIN_U32("graphics/trainer_card/frlg/back.bin.smolTM");
 const u32 gKantoTrainerCardFrontLink_Tilemap[] = INCBIN_U32("graphics/trainer_card/frlg/front_link.bin.smolTM");
 
+const u32 gSinnohTrainerCard_Gfx[] = INCBIN_U32("graphics/trainer_card/pt/tiles.4bpp.smol");
+const u32 gSinnohTrainerCardBg_Tilemap[] = INCBIN_U32("graphics/trainer_card/pt/bg.bin.smolTM");
+const u32 gSinnohTrainerCardFront_Tilemap[] = INCBIN_U32("graphics/trainer_card/pt/front.bin.smolTM");
+const u32 gSinnohTrainerCardBack_Tilemap[] = INCBIN_U32("graphics/trainer_card/pt/back.bin.smolTM");
+const u32 gSinnohTrainerCardFrontLink_Tilemap[] = INCBIN_U32("graphics/trainer_card/pt/front_link.bin.smolTM");
+
 // Pokémon storage system
 
 const u32 gStorageSystemMenu_Gfx[] = INCBIN_U32("graphics/pokemon_storage/menu.4bpp.smol");
