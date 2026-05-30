@@ -783,6 +783,16 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_RowanSpeechRivalName[] =
+{
+    {COMPOUND_STRING("New name!")},
+    {COMPOUND_STRING("Barry")},
+    {COMPOUND_STRING("Nolan")},
+    {COMPOUND_STRING("Roy")},
+    {COMPOUND_STRING("Gavin")},
+    // {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_TrainerSchoolBlackboard[] =
 {
     {COMPOUND_STRING("POISONED")},
@@ -923,6 +933,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    [MULTI_ROWAN_SPEECH_RIVAL_NAME]    = MULTICHOICE(MultichoiceList_RowanSpeechRivalName),
     [MULTI_TRAINER_SCHOOL_BLACKBOARD]  = MULTICHOICE(MultichoiceList_TrainerSchoolBlackboard),
     [MULTI_JUBILIFE_CITY_GROUP]        = MULTICHOICE(MultichoiceList_JubilifeCityGroup)
 };

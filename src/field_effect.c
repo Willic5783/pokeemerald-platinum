@@ -268,9 +268,11 @@ extern const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[];
 
 static const u32 sNewGameBirch_Gfx[] = INCBIN_U32("graphics/birch_speech/birch.4bpp");
 static const u32 sNewGameRowan_Gfx[] = INCBIN_U32("graphics/birch_speech/rowan.4bpp");
+static const u32 sNewGameRival_Gfx[] = INCBIN_U32("graphics/birch_speech/DP_Barry_p.4bpp");
 static const u32 sUnusedBirchBeauty[] = INCBIN_U32("graphics/birch_speech/unused_beauty.4bpp");
 static const u16 sNewGameBirch_Pal[16] = INCBIN_U16("graphics/birch_speech/birch.gbapal");
 static const u16 sNewGameRowan_Pal[16] = INCBIN_U16("graphics/birch_speech/rowan.gbapal");
+static const u16 sNewGameRival_Pal[16] = INCBIN_U16("graphics/birch_speech/DP_Barry_p.gbapal");
 
 static const u32 sPokeballGlow_Gfx[] = INCBIN_U32("graphics/field_effects/pics/pokeball_glow.4bpp");
 static const u16 sPokeballGlow_Pal[16] = INCBIN_U16("graphics/field_effects/palettes/pokeball_glow.gbapal");
@@ -361,6 +363,11 @@ static const struct SpriteFrameImage sPicTable_NewGameRowan[] =
     obj_frame_tiles(sNewGameRowan_Gfx)
 };
 
+static const struct SpriteFrameImage sPicTable_NewGameRival[] =
+{
+    obj_frame_tiles(sNewGameRival_Gfx)
+};
+
 static const struct SpritePalette sSpritePalette_NewGameBirch =
 {
     .data = sNewGameBirch_Pal,
@@ -370,6 +377,12 @@ static const struct SpritePalette sSpritePalette_NewGameBirch =
 static const struct SpritePalette sSpritePalette_NewGameRowan =
 {
     .data = sNewGameRowan_Pal,
+    .tag = 0x1006
+};
+
+static const struct SpritePalette sSpritePalette_NewGameRival =
+{
+    .data = sNewGameRival_Pal,
     .tag = 0x1006
 };
 
@@ -385,6 +398,12 @@ static const union AnimCmd sAnim_NewGameRowan[] =
     ANIMCMD_END
 };
 
+static const union AnimCmd sAnim_NewGameRival[] =
+{
+    ANIMCMD_FRAME(.imageValue = 0, .duration = 1),
+    ANIMCMD_END
+};
+
 static const union AnimCmd *const sAnimTable_NewGameBirch[] =
 {
     sAnim_NewGameBirch
@@ -393,6 +412,11 @@ static const union AnimCmd *const sAnimTable_NewGameBirch[] =
 static const union AnimCmd *const sAnimTable_NewGameRowan[] =
 {
     sAnim_NewGameRowan
+};
+
+static const union AnimCmd *const sAnimTable_NewGameRival[] =
+{
+    sAnim_NewGameRival
 };
 
 static const struct SpriteTemplate sSpriteTemplate_NewGameBirch =
@@ -413,6 +437,17 @@ static const struct SpriteTemplate sSpriteTemplate_NewGameRowan =
     .oam = &sOam_64x64,
     .anims = sAnimTable_NewGameRowan,
     .images = sPicTable_NewGameRowan,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
+};
+
+static const struct SpriteTemplate sSpriteTemplate_NewGameRival =
+{
+    .tileTag = TAG_NONE,
+    .paletteTag = 0x1006,
+    .oam = &sOam_64x64,
+    .anims = sAnimTable_NewGameRival,
+    .images = sPicTable_NewGameRival,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy
 };
@@ -991,6 +1026,12 @@ u8 AddNewGameRowanObject(s16 x, s16 y, u8 subpriority)
 {
     LoadSpritePalette(&sSpritePalette_NewGameRowan);
     return CreateSprite(&sSpriteTemplate_NewGameRowan, x, y, subpriority);
+}
+
+u8 AddNewGameRivalObject(s16 x, s16 y, u8 subpriority)
+{
+    LoadSpritePalette(&sSpritePalette_NewGameRival);
+    return CreateSprite(&sSpriteTemplate_NewGameRival, x, y, subpriority);
 }
 
 u8 CreateMonSprite_PicBox(u16 species, s16 x, s16 y, u8 subpriority)

@@ -20,6 +20,7 @@ const u8 gText_ExpandedPlaceholder_Brendan[] = _("BRENDAN");
 const u8 gText_ExpandedPlaceholder_May[] = _("MAY");
 const u8 gText_ExpandedPlaceholder_Lucas[] = _("Lucas");
 const u8 gText_ExpandedPlaceholder_Dawn[] = _("Dawn");
+const u8 gText_ExpandedPlaceholder_Barry[] = _("Barry");
 const u8 gText_EggNickname[POKEMON_NAME_LENGTH + 1] = _("EGG");
 const u8 gText_Pokemon[POKEMON_NAME_LENGTH + 1] = _("POKéMON");
 const u8 gText_Player[] = _("PLAYER"); // Unused

@@ -239,7 +239,21 @@ static bool8 (*const sArrowWarpMetatileBehaviorChecks[])(u8) =
     [DIR_EAST - 1]  = MetatileBehavior_IsEastArrowWarp,
 };
 
+// static const u8 sRivalAvatarGfxIds[][GENDER_COUNT] =
+// {
+//     [RIVAL_AVATAR_STATE_NORMAL]     = {OBJ_EVENT_GFX_BARRY},
+//     [RIVAL_AVATAR_STATE_MACH_BIKE]  = {OBJ_EVENT_GFX_BARRY},
+//     [RIVAL_AVATAR_STATE_ACRO_BIKE]  = {OBJ_EVENT_GFX_BARRY},
+//     [RIVAL_AVATAR_STATE_SURFING]    = {OBJ_EVENT_GFX_BARRY},
+//     [RIVAL_AVATAR_STATE_UNDERWATER] = {OBJ_EVENT_GFX_BARRY},
+//     [RIVAL_AVATAR_STATE_FIELD_MOVE] = {OBJ_EVENT_GFX_BARRY},
+//     [RIVAL_AVATAR_STATE_FISHING]    = {OBJ_EVENT_GFX_BARRY},
+//     [RIVAL_AVATAR_STATE_WATERING]   = {OBJ_EVENT_GFX_BARRY},
+//     [RIVAL_AVATAR_STATE_VSSEEKER]   = {OBJ_EVENT_GFX_BARRY},
+// };
+
 static const u8 sRivalAvatarGfxIds[][GENDER_COUNT] =
+// static const u8 sHelperAvatarGfxIds[][GENDER_COUNT] =
 {
     [PLAYER_AVATAR_STATE_NORMAL]     = {OBJ_EVENT_GFX_LUCAS_NORMAL, OBJ_EVENT_GFX_DAWN_NORMAL},
     [PLAYER_AVATAR_STATE_MACH_BIKE]  = {OBJ_EVENT_GFX_LUCAS_NORMAL, OBJ_EVENT_GFX_DAWN_NORMAL},
@@ -1482,6 +1496,11 @@ u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
     return sRivalAvatarGfxIds[state][gender];
 }
 
+// u16 GetHelperAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
+// {
+//     return sHelperAvatarGfxIds[state][gender];
+// }
+//
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, u8 gender)
 {
     return sPlayerAvatarGfxIds[state][gender];

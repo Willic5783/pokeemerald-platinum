@@ -123,8 +123,9 @@
 #define MULTI_FALLARBOR_TENT_RULES         112
 #define MULTI_TAG_MATCH_TYPE               113
 #define MULTI_BERRY_PLOT                   114
-#define MULTI_TRAINER_SCHOOL_BLACKBOARD    115
-#define MULTI_JUBILIFE_CITY_GROUP          116
+#define MULTI_ROWAN_SPEECH_RIVAL_NAME      115
+#define MULTI_TRAINER_SCHOOL_BLACKBOARD    116
+#define MULTI_JUBILIFE_CITY_GROUP          117
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

@@ -478,10 +478,17 @@ static const u8 *ExpandPlaceholder_KunChan(void)
 
 static const u8 *ExpandPlaceholder_RivalName(void)
 {
+    return gText_ExpandedPlaceholder_Barry;
+}
+
+static const u8 *ExpandPlaceholder_HelperName(void)
+{
     if (gSaveBlock2Ptr->playerGender == MALE)
-        return gText_ExpandedPlaceholder_May;
+        return gText_ExpandedPlaceholder_Dawn;
+        // return gText_ExpandedPlaceholder_May;
     else
-        return gText_ExpandedPlaceholder_Brendan;
+        return gText_ExpandedPlaceholder_Lucas;
+        // return gText_ExpandedPlaceholder_Brendan;
 }
 
 static const u8 *ExpandPlaceholder_Version(void)
@@ -532,6 +539,7 @@ const u8 *GetExpandedPlaceholder(u32 id)
         [PLACEHOLDER_ID_STRING_VAR_3] = ExpandPlaceholder_StringVar3,
         [PLACEHOLDER_ID_KUN]          = ExpandPlaceholder_KunChan,
         [PLACEHOLDER_ID_RIVAL]        = ExpandPlaceholder_RivalName,
+        [PLACEHOLDER_ID_HELPER]       = ExpandPlaceholder_HelperName,
         [PLACEHOLDER_ID_VERSION]      = ExpandPlaceholder_Version,
         [PLACEHOLDER_ID_AQUA]         = ExpandPlaceholder_Aqua,
         [PLACEHOLDER_ID_MAGMA]        = ExpandPlaceholder_Magma,

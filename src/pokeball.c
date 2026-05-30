@@ -42,6 +42,7 @@ static void SpriteCB_ReleasedMonFlyOut(struct Sprite *sprite);
 static void SpriteCB_TradePokeball(struct Sprite *sprite);
 static void SpriteCB_TradePokeballSendOff(struct Sprite *sprite);
 static void SpriteCB_TradePokeballEnd(struct Sprite *sprite);
+// static void DestroySpriteAndFreeResources_Ball(struct Sprite *sprite);
 static void SpriteCB_HealthboxSlideInDelayed(struct Sprite *sprite);
 static void SpriteCB_HealthboxSlideIn(struct Sprite *sprite);
 static void SpriteCB_HitAnimHealthoxEffect(struct Sprite *sprite);
