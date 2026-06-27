@@ -2,7 +2,7 @@
   "id": "MAP_SANDGEM_TOWN",
   "name": "SandgemTown",
   "layout": "LAYOUT_SANDGEM_TOWN",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_SANDGEM_DAY",
   "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -46,7 +46,7 @@
     },
     {
       "local_id": "LOCALID_SANDGEM_RIVAL",
-      "graphics_id": "OBJ_EVENT_GFX_BARRY",
+      "graphics_id": "OBJ_EVENT_GFX_BARRY_PT",
       "x": 10,
       "y": 12,
       "elevation": 0,
@@ -60,7 +60,7 @@
     },
     {
       "local_id": "LOCALID_SANDGEM_PROF",
-      "graphics_id": "OBJ_EVENT_GFX_PROF_ROWAN",
+      "graphics_id": "OBJ_EVENT_GFX_ROWAN_PT",
       "x": 10,
       "y": 12,
       "elevation": 0,
@@ -73,7 +73,7 @@
       "flag": "FLAG_HIDE_SANDGEM_TOWN_PROFESSOR"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEMON_BREEDER_M_PT",
+      "graphics_id": "OBJ_EVENT_GFX_BREEDER_PT",
       "x": 13,
       "y": 24,
       "elevation": 0,

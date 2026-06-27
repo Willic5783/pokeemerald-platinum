@@ -4550,16 +4550,22 @@ BattleScript_LocalBattleLostPrintWhiteOut::
 	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_LocalBattleLostEnd
 	printstring STRINGID_PLAYERWHITEOUT2_WILD
 	waitmessage B_WAIT_TIME_LONG
+	printstring STRINGID_PLAYERWHITEOUT_DOTS
+	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_PLAYERWHITEOUT3
 	waitmessage B_WAIT_TIME_LONG
 	end2
 BattleScript_LocalBattleLostEnd::
 	printstring STRINGID_PLAYERWHITEOUT2_TRAINER
 	waitmessage B_WAIT_TIME_LONG
+	printstring STRINGID_PLAYERWHITEOUT_DOTS
+	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_PLAYERWHITEOUT3
 	waitmessage B_WAIT_TIME_LONG
 	end2
 .else
+	printstring STRINGID_PLAYERWHITEOUT_DOTS
+	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_PLAYERWHITEOUT3
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_LocalBattleLostEnd::
@@ -4729,7 +4735,7 @@ BattleScript_Pausex20::
 	return
 
 BattleScript_LevelUp::
-	fanfare MUS_LEVEL_UP
+	fanfare MUS_DP_LEVEL_UP
 	printstring STRINGID_PKMNGREWTOLV
 	setbyte sLVLBOX_STATE, 0
 	drawlvlupbox
@@ -4759,7 +4765,7 @@ BattleScript_ForgotAndLearnedNewMove::
 	printstring STRINGID_ANDELLIPSIS
 BattleScript_LearnedNewMove::
 	buffermovetolearn
-	fanfare MUS_LEVEL_UP
+	fanfare MUS_DP_LEVEL_UP
 	printstring STRINGID_PKMNLEARNEDMOVE
 	waitmessage B_WAIT_TIME_LONG
 	updatechoicemoveonlvlup
@@ -8806,6 +8812,8 @@ BattleScript_ForfeitBattleGaveMoney::
 .if B_WHITEOUT_MONEY >= GEN_4
 	printstring STRINGID_PLAYERWHITEOUT2_TRAINER
 .else
+	printstring STRINGID_PLAYERWHITEOUT_DOTS
+	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_PLAYERWHITEOUT3
 .endif
 	waitmessage B_WAIT_TIME_LONG

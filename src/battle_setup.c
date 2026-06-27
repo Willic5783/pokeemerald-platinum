@@ -71,8 +71,8 @@ static void CB2_EndScriptedWildBattle(void);
 static void TryUpdateGymLeaderRematchFromWild(void);
 static void TryUpdateGymLeaderRematchFromTrainer(void);
 static void CB2_GiveStarter(void);
-// static void CB2_StartFirstBattle(void);
-// static void CB2_EndFirstBattle(void);
+static void CB2_StartFirstBattle(void);
+static void CB2_EndFirstBattle(void);
 static void SaveChangesToPlayerParty(void);
 static void HandleBattleVariantEndParty(void);
 static void CB2_EndTrainerBattle(void);
@@ -890,33 +890,33 @@ static void CB2_GiveStarter(void)
     // BattleTransition_Start(B_TRANSITION_BLUR);
 }
 
-// static void CB2_StartFirstBattle(void)
-// {
-//     UpdatePaletteFade();
-//     RunTasks();
-//
-//     if (IsBattleTransitionDone() == TRUE)
-//     {
-//         gBattleTypeFlags = BATTLE_TYPE_FIRST_BATTLE;
-//         gMain.savedCallback = CB2_EndFirstBattle;
-//         FreeAllWindowBuffers();
-//         SetMainCallback2(CB2_InitBattle);
-//         RestartWildEncounterImmunitySteps();
-//         ClearPoisonStepCounter();
-//         IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
-//         IncrementGameStat(GAME_STAT_WILD_BATTLES);
-//         IncrementDailyWildBattles();
-//         TryUpdateGymLeaderRematchFromWild();
-//     }
-// }
-//
-// static void CB2_EndFirstBattle(void)
-// {
-//     Overworld_ClearSavedMusic();
-//     DowngradeBadPoison();
-//     SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
-// }
-//
+static void CB2_StartFirstBattle(void)
+{
+    UpdatePaletteFade();
+    RunTasks();
+
+    if (IsBattleTransitionDone() == TRUE)
+    {
+        gBattleTypeFlags = BATTLE_TYPE_FIRST_BATTLE;
+        gMain.savedCallback = CB2_EndFirstBattle;
+        FreeAllWindowBuffers();
+        SetMainCallback2(CB2_InitBattle);
+        RestartWildEncounterImmunitySteps();
+        ClearPoisonStepCounter();
+        IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+        IncrementGameStat(GAME_STAT_WILD_BATTLES);
+        IncrementDailyWildBattles();
+        TryUpdateGymLeaderRematchFromWild();
+    }
+}
+
+static void CB2_EndFirstBattle(void)
+{
+    Overworld_ClearSavedMusic();
+    DowngradeBadPoison();
+    SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+}
+
 static void TryUpdateGymLeaderRematchFromWild(void)
 {
     if (GetGameStat(GAME_STAT_WILD_BATTLES) % 60 == 0)
@@ -1454,6 +1454,15 @@ void PlayTrainerEncounterMusic(void)
     {
         switch (GetTrainerEncounterMusicId(trainerId))
         {
+        case TRAINER_ENCOUNTER_MUSIC_YOUNGSTER:
+            music = MUS_DP_ENCOUNTER_BOY;
+            break;
+        case TRAINER_ENCOUNTER_MUSIC_LASS:
+            music = MUS_DP_ENCOUNTER_GIRL;
+            break;
+        case TRAINER_ENCOUNTER_MUSIC_ARTIST:
+            music = MUS_DP_ENCOUNTER_ARTIST;
+            break;
         case TRAINER_ENCOUNTER_MUSIC_MALE:
             music = MUS_ENCOUNTER_MALE;
             break;

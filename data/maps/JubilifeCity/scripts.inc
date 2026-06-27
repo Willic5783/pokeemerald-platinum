@@ -15,7 +15,7 @@ JubilifeCity_OnTransition:
 	end
 
 JubilifeCity_EventScript_HelperEncounter_1::
-	lockall
+	lock
 	special SpawnCameraObject
 	setvar VAR_JUBILIFE_CITY_STATE, 1
 	setobjectxy LOCALID_JUBILIFE_HELPER, 54, 54
@@ -32,7 +32,7 @@ JubilifeCity_EventScript_HelperEncounter_1::
 	end
 
 JubilifeCity_EventScript_HelperEncounter_2::
-	lockall
+	lock
 	special SpawnCameraObject
 	setvar VAR_JUBILIFE_CITY_STATE, 1
 	call JubilifeCity_EventScript_HelperWalkDown
@@ -44,7 +44,7 @@ JubilifeCity_EventScript_HelperEncounter_2::
 	end
 
 JubilifeCity_EventScript_HelperEncounter_3::
-	lockall
+	lock
 	special SpawnCameraObject
 	setvar VAR_JUBILIFE_CITY_STATE, 1
 	setobjectxy LOCALID_JUBILIFE_HELPER, 56, 54
@@ -60,6 +60,14 @@ JubilifeCity_EventScript_HelperEncounter_3::
 	goto JubilifeCity_EventScript_HelperWalkUp
 	end
 
+JubilifeCity_EventScript_PlayMusicLucas::
+	playbgm MUS_DP_LUCAS, FALSE
+	return
+
+JubilifeCity_EventScript_PlayMusicDawn::
+	playbgm MUS_DP_DAWN, FALSE
+	return
+
 JubilifeCity_EventScript_HelperWalkDown::
 	applymovement LOCALID_CAMERA, Common_Movement_WalkUp
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkDown2
@@ -69,6 +77,9 @@ JubilifeCity_EventScript_HelperWalkDown::
 	waitmovement 0
 	delay 48
 	delay 48
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, JubilifeCity_EventScript_PlayMusicDawn
+	call_if_eq VAR_RESULT, FEMALE, JubilifeCity_EventScript_PlayMusicLucas
 	applymovement LOCALID_CAMERA, Common_Movement_WalkDown
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkDown3
 	waitmovement 0
@@ -136,7 +147,8 @@ JubilifeCity_EventScript_HelperWalkUp::
 	applymovement LOCALID_CAMERA, Common_Movement_WalkUp17
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp17
 	waitmovement 0
-	msgbox JubilifeCity_Text_ThatMan, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_ThatMan, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry1
 	waitmovement 0
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry2
@@ -152,7 +164,9 @@ JubilifeCity_EventScript_HelperWalkUp::
 	waitmovement 0
 	delay 48
 	delay 48
-	msgbox JubilifeCity_Text_HowDidYouKnow, MSGBOX_SIGN
+	playbgm MUS_PL_LOOKER, FALSE
+	msgbox JubilifeCity_Text_HowDidYouKnow, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox JubilifeCity_Text_BegYourPardon, MSGBOX_YESNO
@@ -162,25 +176,31 @@ JubilifeCity_EventScript_HelperWalkUp::
 	@ FODO: Implement and give Vs. Recorder item
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox JubilifeCity_Text_NiftyDevice, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_NiftyDevice, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookAround
 	waitmovement 0
-	msgbox JubilifeCity_Text_HaveRequest, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_HaveRequest, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperWatchLooker
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerWatchLooker
 	applymovement LOCALID_JUBILIFE_LOOKER, JubilifeCity_Movement_LookerScurry3
 	waitmovement 0
+	fadedefaultbgm
 	closemessage
 	delay 48
-	msgbox JubilifeCity_Text_WorkingInternational, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_WorkingInternational, MSGBOX_DEFAULT
+	closemessage
 	delay 48
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerSeeSchool
 	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperSeeSchool
 	waitmovement 0
-	msgbox JubilifeCity_Text_HereItIs, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_HereItIs, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_JUBILIFE_HELPER, JubilifeCity_Movement_HelperLeaveSchool
 	waitmovement 0
-	msgbox JubilifeCity_Text_SawYourFriend, MSGBOX_SIGN
+	msgbox JubilifeCity_Text_SawYourFriend, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, JubilifeCity_Movement_PlayerWatchHelper
 	applymovement LOCALID_JUBILIFE_HELPER, Common_Movement_WalkDown6
 	waitmovement 0
@@ -630,16 +650,6 @@ JubilifeCity_Movement_TerminalGuard_Leave4:
 	walk_in_place_down
 	step_end
 
-JubilifeCity_EventScript_ClownStickAround::
-	msgbox JubilifeCity_Text_ClownStickAround, MSGBOX_DEFAULT
-	release
-	end
-
-JubilifeCity_EventScript_WrongAnswer::
-	msgbox JubilifeCity_Text_ClownWrongAnswer, MSGBOX_DEFAULT
-	release
-	end
-
 JubilifeCity_EventScript_ClownGrow::
 	lock
 	faceplayer
@@ -654,11 +664,6 @@ JubilifeCity_EventScript_ClownGrow::
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_JUBILIFE_CLOWN_GROW
-	release
-	end
-
-JubilifeCity_EventScript_ClownGrowDone::
-	msgbox JubilifeCity_Text_ClownGrowDone, MSGBOX_DEFAULT
 	release
 	end
 
@@ -679,11 +684,6 @@ JubilifeCity_EventScript_ClownItem::
 	release
 	end
 
-JubilifeCity_EventScript_ClownItemDone::
-	msgbox JubilifeCity_Text_ClownItemDone, MSGBOX_DEFAULT
-	release
-	end
-
 JubilifeCity_EventScript_ClownType::
 	lock
 	faceplayer
@@ -701,8 +701,33 @@ JubilifeCity_EventScript_ClownType::
 	release
 	end
 
+JubilifeCity_EventScript_ClownStickAround::
+	msgbox JubilifeCity_Text_ClownStickAround, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+JubilifeCity_EventScript_WrongAnswer::
+	msgbox JubilifeCity_Text_ClownWrongAnswer, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+JubilifeCity_EventScript_ClownGrowDone::
+	msgbox JubilifeCity_Text_ClownGrowDone, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+JubilifeCity_EventScript_ClownItemDone::
+	msgbox JubilifeCity_Text_ClownItemDone, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
 JubilifeCity_EventScript_ClownTypeDone::
 	msgbox JubilifeCity_Text_ClownTypeDone, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 
@@ -979,6 +1004,10 @@ JubilifeCity_EventScript_JubilifeTVSign::
 
 JubilifeCity_EventScript_PoketchCompanySign::
 	msgbox JubilifeCity_Text_PoketchCompanySign, MSGBOX_SIGN
+	end
+
+JubilifeCity_EventScript_CompanyBlock::
+	msgbox JubilifeCity_Text_CompanyBlock, MSGBOX_NPC
 	end
 
 JubilifeCity_Text_AreYouCatching:
@@ -1417,3 +1446,8 @@ JubilifeCity_Text_JubilifeTVSign:
 JubilifeCity_Text_PoketchCompanySign:
 	.string "The Pokétch Company\n"
 	.string "Pokémon Watches for the World!$"
+
+JubilifeCity_Text_CompanyBlock:
+	.string "This building is closed for\n"
+	.string "maintenance.\p"
+	.string "Please come back later.$"

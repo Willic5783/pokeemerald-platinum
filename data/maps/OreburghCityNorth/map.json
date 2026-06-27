@@ -2,11 +2,11 @@
   "id": "MAP_OREBURGH_CITY",
   "name": "OreburghCityNorth",
   "layout": "LAYOUT_OREBURGH_CITY_NORTH",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DP_OREBURGH_DAY",
   "region_map_section": "MAPSEC_OREBURGH_CITY",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -53,7 +53,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BARRY",
+      "graphics_id": "OBJ_EVENT_GFX_BARRY_PT",
       "x": 33,
       "y": 24,
       "elevation": 0,

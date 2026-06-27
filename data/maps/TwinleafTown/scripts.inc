@@ -60,7 +60,9 @@ TwinleafTown_EventScript_RivalMeet::
 	playse SE_PIN
 	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	msgbox TwinleafTown_Text_RivalBump, MSGBOX_SIGN
+	playbgm MUS_DP_RIVAL, FALSE
+	msgbox TwinleafTown_Text_RivalBump, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_PLAYER, TwinleafTown_Movement_PlayerFaceRight
 	applymovement LOCALID_TWINLEAF_RIVAL, TwinleafTown_Movement_RivalRight
 	waitmovement 0
@@ -75,17 +77,21 @@ TwinleafTown_EventScript_RivalMeet::
 	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	delay 30
-	msgbox TwinleafTown_Text_RivalForget, MSGBOX_SIGN
+	msgbox TwinleafTown_Text_RivalForget, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_TWINLEAF_RIVAL, Common_Movement_FaceUp
 	opendoor 3, 12
 	waitdooranim
 	waitmovement 0
+	fadedefaultbgm
 	applymovement LOCALID_TWINLEAF_RIVAL, TwinleafTown_Movement_RivalUp
 	waitmovement 0
 	closedoor 3, 12
 	removeobject LOCALID_TWINLEAF_RIVAL
 	waitdooranim
 	release
+	delay 48
+	delay 48
 	end
 
 TwinleafTown_Movement_PlayerBump:
@@ -359,6 +365,7 @@ TwinleafTown_Movement_WalkLeft7:
 	walk_down
 	step_end
 
+@ FODO: Make text print double height
 TwinleafTown_Text_Thud:
 	.string "THUD!!$"
 

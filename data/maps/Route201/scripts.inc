@@ -254,6 +254,7 @@ Route201_Movement_RunGrass:
 
 
 Route201_EventScript_ProfessorMeet::
+	playbgm MUS_DP_ROWAN, FALSE
 	addobject LOCALID_ROUTE201_PROF
 	applymovement LOCALID_ROUTE201_PROF, Route201_Movement_ProfessorEnter
 	waitmovement 0
@@ -325,6 +326,9 @@ Route201_EventScript_HundredPass::
 	applymovement LOCALID_ROUTE201_PROF, Common_Movement_WalkInPlaceRight
 	waitmovement 0
 	delay 48
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, Route201_EventScript_PlayMusicDawn
+	call_if_eq VAR_RESULT, FEMALE, Route201_EventScript_PlayMusicLucas
 	addobject LOCALID_ROUTE201_HELPER
 	applymovement LOCALID_ROUTE201_HELPER, Route201_Movement_HelperEnter
 	waitmovement 0
@@ -347,9 +351,20 @@ Route201_EventScript_HundredPass::
 	waitmovement 0
 	msgbox Route201_Text_SomeClass, MSGBOX_DEFAULT
 	closemessage
+	fadedefaultbgm
+	delay 48
+	delay 48
 	delay 48
 	release
 	end
+
+Route201_EventScript_PlayMusicLucas::
+	playbgm MUS_DP_LUCAS, FALSE
+	return
+
+Route201_EventScript_PlayMusicDawn::
+	playbgm MUS_DP_DAWN, FALSE
+	return
 
 Route201_EventScript_LeftBriefcaseDawn::
 	msgbox Route201_Text_LeftBriefcaseDawn, MSGBOX_DEFAULT
@@ -588,6 +603,9 @@ Route201_Movement_RivalScurry:
 	walk_in_place_fast_down
 	walk_in_place_fast_down
 	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
+	walk_in_place_fast_down
 	walk_fast_left
 	walk_fast_down
 	step_end
@@ -770,6 +788,7 @@ Route201_Text_HereGoes:
 	.string "OK, here goes!\p"
 	.string "On your marks...$"
 
+@ FODO: Make text print double height
 Route201_Text_HoldIt:
 	.string "Hold it!$"
 
@@ -857,7 +876,7 @@ Route201_Text_FriendHere:
 	.string "the tall grass and all...\p"
 	.string "Professor: !\p"
 	.string "How big of you...\p"
-	.string "Ver well, then!\n"
+	.string "Very well, then!\n"
 	.string "I will entrust you two with Pokémon!\p"
 	.string "I apologize for putting you through\n"
 	.string "that exercise.\p"

@@ -45,15 +45,15 @@
 
 #define FLAG_ROUTE_201_POTION           0x20
 #define FLAG_GLOBAL_TERMINAL_OPEN       0x21
-#define FLAG_JUBILIFE_CLOWN_GROW        0x22
-#define FLAG_JUBILIFE_CLOWN_ITEM        0x23
-#define FLAG_JUBILIFE_CLOWN_TYPE        0x24
-#define FLAG_TRAINER_SCHOOL_POTION      0x25
-#define FLAG_OREBURGH_CITY_SUPER_POTION 0x26
-#define FLAG_OREBURGH_CITY_DUSK_BALL    0x27
-#define FLAG_OREBURGH_CITY_GREAT_BALL   0x28
-#define FLAG_TM_STEALTH_ROCK            0x29
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
+#define FLAG_TRAINER_SCHOOL_POTION      0x22
+#define FLAG_JUBILIFE_CLOWN_GROW        0x23
+#define FLAG_JUBILIFE_CLOWN_ITEM        0x24
+#define FLAG_JUBILIFE_CLOWN_TYPE        0x25
+#define FLAG_JUBILIFE_CITY_QUICK_CLAW   0x26
+#define FLAG_OREBURGH_CITY_SUPER_POTION 0x27
+#define FLAG_OREBURGH_CITY_DUSK_BALL    0x28
+#define FLAG_OREBURGH_CITY_GREAT_BALL   0x29
+#define FLAG_TM_STEALTH_ROCK            0x2A
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
@@ -680,7 +680,7 @@
 #define FLAG_HIDE_TRAINER_SCHOOL_RIVAL         0x275
 #define FLAG_HIDE_ROUTE_203_RIVAL              0x276
 #define FLAG_HIDE_OREBURGH_CITY_RIVAL          0x277
-#define FLAG_UNUSED_0x278  0x278 // Unused Flag
+#define FLAG_HIDE_OREBURGH_MINE_ROCK           0x278
 #define FLAG_UNUSED_0x279  0x279 // Unused Flag
 #define FLAG_UNUSED_0x27A  0x27A // Unused Flag
 #define FLAG_UNUSED_0x27B  0x27B // Unused Flag
@@ -1240,7 +1240,7 @@
 #define FLAG_ITEM_OREBURGH_MINE_POKE_BALL                           0x49E
 #define FLAG_ITEM_OREBURGH_MINE_POTION                              0x49F
 #define FLAG_ITEM_OREBURGH_MINE_ESCAPE_ROPE                         0x4A0
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
+#define FLAG_ITEM_RAVAGED_PATH_POTION                               0x4A1
 #define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
 #define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag

@@ -32,7 +32,8 @@ TwinleafTown_RivalsHouse_2F_EventScript_MeetRival::
 	setvar VAR_TWINLEAF_TOWN_STATE, 1
 	applymovement LOCALID_PLAYER, Common_Movement_FaceRight
 	waitmovement 0
-	msgbox TwinleafTown_RivalsHouse_2F_TakeBag, MSGBOX_SIGN
+	msgbox TwinleafTown_RivalsHouse_2F_TakeBag, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, Common_Movement_FaceLeft
 	waitmovement 0
 	playse SE_PIN
@@ -42,15 +43,20 @@ TwinleafTown_RivalsHouse_2F_EventScript_MeetRival::
 	waitmovement 0
 	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, Common_Movement_Delay48
 	waitmovement 0
-	msgbox TwinleafTown_RivalsHouse_2F_GoingLake, MSGBOX_SIGN
+	playbgm MUS_DP_RIVAL, FALSE
+	msgbox TwinleafTown_RivalsHouse_2F_GoingLake, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, TwinleafTown_RivalsHouse_2F_Movement_RivalRun1
 	waitmovement 0
+	fadedefaultbgm
 	applymovement LOCALID_PLAYER, TwinleafTown_RivalsHouse_2F_Movement_BumpPlayer
 	applymovement LOCALID_TWINLEAF_RIVAL2F_RIVAL, TwinleafTown_RivalsHouse_2F_Movement_RivalRun2
 	waitmovement 0
 	removeobject LOCALID_TWINLEAF_RIVAL2F_RIVAL
 	setflag FLAG_HIDE_RIVAL_HOUSE_RIVAL
 	release
+	delay 48
+	delay 48
 	end
 
 TwinleafTown_RivalsHouse_2F_Movement_RivalRun1:
